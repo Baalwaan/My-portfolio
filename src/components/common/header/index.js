@@ -5,7 +5,7 @@ import Drawer from './Drawer';
 
 import { ReactComponent as MenuIcon } from '../../../assets/burger-icon1.svg';
 
-const StyledHeader = styled.nav`
+const MobileHeader = styled.nav`
   position: sticky;
   top: 0;
   z-index: 1;
@@ -20,13 +20,19 @@ const MenuContainer = styled.div`
 `;
 
 const Header = () => {
+  const [burgerActive, setBurgerActive] = React.useState('100vw');
+
+  const handleBurgerState = () => {
+    setBurgerActive('0vw');
+  };
+
   return (
-    <StyledHeader>
+    <MobileHeader>
       <MenuContainer>
-        <MenuIcon />
+        <MenuIcon onClick={handleBurgerState} />
       </MenuContainer>
-      {/* <Drawer /> */}
-    </StyledHeader>
+      <Drawer burgerActive={burgerActive} setBurgerActive={setBurgerActive} />
+    </MobileHeader>
   );
 };
 
