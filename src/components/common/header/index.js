@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Drawer from './Drawer';
+
 import { ReactComponent as MenuIcon } from '../../../assets/burger-icon1.svg';
 
 const StyledHeader = styled.nav`
@@ -23,6 +25,7 @@ const Header = () => {
       <MenuContainer>
         <MenuIcon />
       </MenuContainer>
+      {/* <Drawer /> */}
     </StyledHeader>
   );
 };
