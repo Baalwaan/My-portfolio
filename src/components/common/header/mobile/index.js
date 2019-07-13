@@ -13,6 +13,7 @@ const Header = styled.nav`
   min-height: 70px;
   border-bottom: black solid 1px;
   text-align: right;
+  background-color: white;
   @media (max-width: 649px) {
     display: block;
   }
