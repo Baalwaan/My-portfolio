@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 const Header = styled.nav`
   display: none;
-
   position: sticky;
   top: 0;
   z-index: 1;
@@ -19,11 +18,12 @@ const Header = styled.nav`
   }
 `;
 
-const Links = styled.span`
+const Links = styled(NavLink)`
   color: white;
   font-weight: bold;
   font-size: 1.2em;
   cursor: pointer;
+  }
 `;
 
 const DesktopHeader = () => {
@@ -31,10 +31,10 @@ const DesktopHeader = () => {
 
   return (
     <Header>
-      <Links>Home</Links>
-      <Links>About me</Links>
-      <Links>Projects</Links>
-      <Links>Contact</Links>
+      <Links to="/">Home</Links>
+      <Links to="/about">About me</Links>
+      <Links to="/projects">Projects</Links>
+      <Links to="/contact">Contact</Links>
     </Header>
   );
 };
