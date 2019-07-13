@@ -29,6 +29,10 @@ const MenuContainer = styled.div`
 const Link = styled(NavLink)`
   margin: 1em auto;
   color: lightgray;
+  text-decoration: none;
+  :active {
+    color: white;
+  }
 `;
 
 const Drawer = ({ burgerActive, setBurgerActive }) => {
@@ -43,13 +47,21 @@ const Drawer = ({ burgerActive, setBurgerActive }) => {
           <CloseButton onClick={updateBurgerState} />
         </MenuContainer>
 
-        <Link to="/">Home</Link>
+        <Link to="/" onClick={updateBurgerState}>
+          Home
+        </Link>
 
-        <Link to="/about">About Me</Link>
+        <Link to="/about" onClick={updateBurgerState}>
+          About Me
+        </Link>
 
-        <Link to="/projects">Projects</Link>
+        <Link to="/projects" onClick={updateBurgerState}>
+          Projects
+        </Link>
 
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact" onClick={updateBurgerState}>
+          Contact
+        </Link>
       </Container>
     </>
   );
