@@ -1,23 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// squarecircle, github profile cards , quiz app, authentication, smoothie, workout, workout, remindly, dipict, image carousel
-
-import auth from '../../../assets/projects/auth.png';
-
 const AnchorContainer = styled.div`
-position: relative
   width: 20em;
   height: 20em;
-  background-image: url(${props => props.auth});
-  background-repeat: none;
-  background-size: 100%;
-//   border: solid black 1px;
-
+  background-image: url(${props => props.projectImg});
+  background-repeat: no-repeat;
+  background-size: 95% 95%;
+  background-position: center;
+  margin: 5px; 0;
+  border: solid black 2px;
 `;
 
 const Anchor = styled.a`
-  position: absolute;
   text-decoration: none;
   color: white;
   font-size: 1.5em;
@@ -34,18 +29,17 @@ const Anchor = styled.a`
   }
 `;
 
-const Tiles = ({ auth }) => (
-  <AnchorContainer auth={auth}>
-    <Anchor href="http://google.com" target="_blank" rel="noopener noreferrer">
-      Hello
-      {/* project nam  */}
+const Tiles = ({ projectName, projectImg, projectUrl }) => (
+  <AnchorContainer projectImg={projectImg}>
+    <Anchor
+      href={projectUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={projectName}
+    >
+      {projectName}
     </Anchor>
   </AnchorContainer>
 );
 
 export default Tiles;
-
-// <div class="projects-container">
-// <div class=" projects" id="square-circle-app">
-//   <a class="project-link" href="https://github.com/FAC-Sixteen/square-circle">Square-Circle</a>
-// </div>
