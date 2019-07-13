@@ -18,7 +18,7 @@ const Header = styled.nav`
   }
 `;
 
-const Links = styled(NavLink)`
+const Link = styled(NavLink)`
   color: white;
   font-weight: bold;
   font-size: 1.2em;
@@ -37,10 +37,10 @@ const DesktopHeader = () => {
 
   return (
     <Header>
-      <Links to="/">Home</Links>
-      <Links to="/about">About me</Links>
-      <Links to="/projects">Projects</Links>
-      <Links to="/contact">Contact</Links>
+      <Link to="/">Home</Link>
+      <Link to="/about">About me</Link>
+      <Link to="/projects">Projects</Link>
+      <Link to="/contact">Contact</Link>
     </Header>
   );
 };

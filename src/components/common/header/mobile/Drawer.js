@@ -26,8 +26,9 @@ const MenuContainer = styled.div`
   justify-content: flex-end;
 `;
 
-const Link = styled.p`
+const Link = styled(NavLink)`
   margin: 1em auto;
+  color: lightgray;
 `;
 
 const Drawer = ({ burgerActive, setBurgerActive }) => {
@@ -42,13 +43,13 @@ const Drawer = ({ burgerActive, setBurgerActive }) => {
           <CloseButton onClick={updateBurgerState} />
         </MenuContainer>
 
-        <Link>Home</Link>
+        <Link to="/">Home</Link>
 
-        <Link>About Me</Link>
+        <Link to="/about">About Me</Link>
 
-        <Link>Projects</Link>
+        <Link to="/projects">Projects</Link>
 
-        <Link>Contact</Link>
+        <Link to="/contact">Contact</Link>
       </Container>
     </>
   );
