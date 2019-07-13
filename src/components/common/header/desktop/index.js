@@ -33,8 +33,6 @@ const Link = styled(NavLink)`
 `;
 
 const DesktopHeader = () => {
-  const abc = 'hi';
-
   return (
     <Header>
       <Link to="/">Home</Link>

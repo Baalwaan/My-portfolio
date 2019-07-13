@@ -7,7 +7,7 @@ import Header from './components/common/header';
 
 //Pages
 import HomePage from './components/pages/home';
-import ProjectPage from './components/pages/projects';
+import ProjectsPage from './components/pages/projects';
 import AboutPage from './components/pages/about';
 import ContactPage from './components/pages/contact';
 
@@ -17,7 +17,7 @@ const App = () => {
       <Header />
       <Route exact path="/" component={HomePage} />
       <Route exact path="/about" component={AboutPage} />
-      <Route exact path="/projects" components={ProjectPage} />
+      <Route exact path="/projects" component={ProjectsPage} />
       <Route exact path="/contact" component={ContactPage} />
     </Router>
   );
