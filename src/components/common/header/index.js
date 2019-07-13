@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Drawer from './Drawer';
+import DesktopHeader from './desktop';
 
 import { ReactComponent as MenuIcon } from '../../../assets/burger-icon1.svg';
 
@@ -10,13 +11,13 @@ const MobileHeader = styled.nav`
   top: 0;
   z-index: 1;
   min-height: 70px;
-  color: white;
   border-bottom: black solid 1px;
   text-align: right;
 `;
 
 const MenuContainer = styled.div`
   margin: 1em;
+  cursor: pointer;
 `;
 
 const Header = () => {
@@ -27,12 +28,15 @@ const Header = () => {
   };
 
   return (
-    <MobileHeader>
-      <MenuContainer>
-        <MenuIcon onClick={handleBurgerState} />
-      </MenuContainer>
-      <Drawer burgerActive={burgerActive} setBurgerActive={setBurgerActive} />
-    </MobileHeader>
+    <>
+      <MobileHeader>
+        <MenuContainer>
+          <MenuIcon onClick={handleBurgerState} />
+        </MenuContainer>
+        <Drawer burgerActive={burgerActive} setBurgerActive={setBurgerActive} />
+      </MobileHeader>
+      <DesktopHeader />
+    </>
   );
 };
 
