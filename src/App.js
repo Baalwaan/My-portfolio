@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import { Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 //Common Components
 import Header from './components/common/header';
@@ -10,15 +10,16 @@ import HomePage from './components/pages/home';
 import ProjectPage from './components/pages/projects';
 import AboutPage from './components/pages/about';
 import ContactPage from './components/pages/contact';
+
 const App = () => {
   return (
-    <>
+    <Router>
       <Header />
-      <HomePage />
-      <AboutPage />
-      <ProjectPage />
-      <ContactPage />
-    </>
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/about" component={AboutPage} />
+      <Route exact path="/projects" components={ProjectPage} />
+      <Route exact path="/contact" component={ContactPage} />
+    </Router>
   );
 };
 
