@@ -35,10 +35,18 @@ const Link = styled(NavLink)`
 const DesktopHeader = () => {
   return (
     <Header>
-      <Link to="/">Home</Link>
-      <Link to="/about">About me</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/contact">Contact</Link>
+      <Link to="/" title="Home">
+        Home
+      </Link>
+      <Link to="/about" title="About Me Page">
+        About me
+      </Link>
+      <Link to="/projects" title="Projects Page">
+        Projects
+      </Link>
+      <Link to="/contact" title="Contact Page">
+        Contact
+      </Link>
     </Header>
   );
 };
