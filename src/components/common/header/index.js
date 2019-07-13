@@ -7,12 +7,16 @@ import DesktopHeader from './desktop';
 import { ReactComponent as MenuIcon } from '../../../assets/burger-icon1.svg';
 
 const MobileHeader = styled.nav`
+  display: none;
   position: sticky;
   top: 0;
   z-index: 1;
   min-height: 70px;
   border-bottom: black solid 1px;
   text-align: right;
+  @media (max-width: 649px) {
+    display: block;
+  }
 `;
 
 const MenuContainer = styled.div`
