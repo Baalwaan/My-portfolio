@@ -23,6 +23,12 @@ const Links = styled(NavLink)`
   font-weight: bold;
   font-size: 1.2em;
   cursor: pointer;
+  color: lightgray;
+  text-decoration: none;
+  border-bottom: solid 1px transparent;
+  :hover {
+    color: white;
+    border-bottom: solid white 2px;
   }
 `;
 
