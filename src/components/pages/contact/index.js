@@ -6,6 +6,7 @@ const Page = styled.section`
   margin: auto;
 `;
 const PageTitle = styled.h1`
+  margin: 0.5em 0 0.5em 0;
   font-weight: bold;
   text-align: center;
   font-size: 2em;
@@ -15,7 +16,6 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
   padding-bottom: 1.25em;
   max-width: 25em;
   margin: auto;
@@ -39,7 +39,18 @@ const TextArea = styled.textarea`
   font-size: inherit;
   resize: none;
   text-indent: 1em;
+  margin-bottom: 1em;
   }
+`;
+
+const Button = styled.button`
+  padding: 1.25em;
+  min-width: 11em;
+  font-size: 0.8em;
+  cursor: pointer;
+  outline: none;
+  background: black;
+  color: white;
 `;
 
 const ContactPage = () => (
@@ -75,6 +86,7 @@ const ContactPage = () => (
         placeholder="Your message..."
         name="message"
       />
+      <Button>Send Message</Button>
     </Form>
   </Page>
 );
