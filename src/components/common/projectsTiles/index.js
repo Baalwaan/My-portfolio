@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AnchorContainer = styled.div`
-  width: 20em;
-  height: 20em;
+  width: 18em;
+  height: 18em;
   background-image: url(${props => props.projectImg});
   background-repeat: no-repeat;
   background-size: 95% 95%;
   background-position: center;
-  margin: 5px; 0;
+  margin: 1em auto;
   border: solid black 2px;
 `;
 

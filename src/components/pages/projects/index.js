@@ -22,9 +22,23 @@ const authUrl = 'https://github.com/Baalwaan/Authentication-By-Me';
 const smootieUrl = 'https://github.com/Baalwaan/Smoothie-bar';
 const favWorkoutUrl = 'https://github.com/Baalwaan/exp-hbs-project';
 
-const Container = styled.div`
+const Page = styled.section`
   width: 80vw;
   margin: auto;
+`;
+
+const PageTitle = styled.h1`
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+`;
+
+const StyledP = styled.p`
+  font-size: 1.5em;
+  padding: 0.5em;
+`;
+
+const Container = styled.div`
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -62,19 +76,23 @@ const ProjectsPage = () => {
     }
   ];
   return (
-    <Container>
-      {projects.map((project, id) => {
-        ++id;
-        return (
-          <Tiles
-            projectName={project.name}
-            projectImg={project.image_path}
-            projectUrl={project.repo_url}
-            key={id}
-          />
-        );
-      }, 0)}
-    </Container>
+    <Page>
+      <PageTitle>Projects</PageTitle>
+      <StyledP>Here are some fun projects I have worked on.</StyledP>
+      <Container>
+        {projects.map((project, id) => {
+          ++id;
+          return (
+            <Tiles
+              projectName={project.name}
+              projectImg={project.image_path}
+              projectUrl={project.repo_url}
+              key={id}
+            />
+          );
+        }, 0)}
+      </Container>
+    </Page>
   );
 };
 
