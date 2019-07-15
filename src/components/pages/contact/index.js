@@ -5,6 +5,12 @@ const Page = styled.section`
   width: 80vw;
   margin: auto;
 `;
+const PageTitle = styled.h1`
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+`;
+
 const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -15,18 +21,14 @@ const Form = styled.form`
   margin: auto;
 `;
 
-const InputContainer = styled.div`
-  margin: 1em 0;
-  width: 100%;
-`;
-
 const InputField = styled.input`
   width: 100%;
-  padding: 1em 0;
+  padding: 0.7em 0;
   outline: none;
   font-size: 1.2em;
   border: solid black;
   text-indent: 1em;
+  margin-bottom: 1em;
 `;
 
 const TextArea = styled.textarea`
@@ -36,24 +38,43 @@ const TextArea = styled.textarea`
   padding: 1.25em 0;
   font-size: inherit;
   resize: none;
+  text-indent: 1em;
+  }
 `;
 
 const ContactPage = () => (
   <Page>
+    <PageTitle>Get in Touch...</PageTitle>
     <Form>
-      Contact page
-      <InputContainer>
-        <InputField />
-      </InputContainer>
-      <InputContainer>
-        <InputField />
-      </InputContainer>
-      <InputContainer>
-        <InputField />
-      </InputContainer>
-      <InputContainer>
-        <TextArea />
-      </InputContainer>
+      <InputField
+        type="text"
+        placeholder="Your name *"
+        id="name"
+        pattern="^(?=.{1,40}$)[a-zA-Z]+(?:['_.\s][a-z]+)*$"
+        name="name"
+        required
+      />
+      <InputField
+        type="email"
+        placeholder="Your email *"
+        id="email"
+        name="email"
+        pattern="[-.\w]+@([\w-]+\.)+[\w-]{2,20}"
+        required
+      />
+      <InputField
+        type="text"
+        placeholder="Your phone *"
+        class="form-data"
+        name="phone"
+        required
+      />
+      <TextArea
+        cols="30"
+        rows="10"
+        placeholder="Your message..."
+        name="message"
+      />
     </Form>
   </Page>
 );
