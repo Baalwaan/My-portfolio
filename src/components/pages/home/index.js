@@ -1,16 +1,24 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-import { left, right } from './animation/keyframes';
+//keyframes in animation folder
+import { left, right, type, type2, blink } from './animation/keyframes';
 
 //images
 import CodeImg from '../../../assets/code.png';
 import Me from '../../../assets/me2.jpg';
 
 const Page = styled.section`
-  min-height: 100vh;
-  width: 80vw;
+  min-height: 90vh;
+  width: 60vw;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @media (max-width: 650px) {
+   width: 80vw;
+  }
+}
 `;
 
 const PageTitle = styled.h1`
@@ -21,13 +29,18 @@ const PageTitle = styled.h1`
 `;
 
 const Container = styled.div`
-  // max-width: 41em;
+  position: relative;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 75vh;
+  height: 70vh;
   border: solid black 1px;
+  @media (max-width: 650px) {
+      height: 50vh;
+    }
+  }
 `;
 
 const TopTier = styled.div`
@@ -37,9 +50,9 @@ const TopTier = styled.div`
   animation: ${left} 2s ease-in-out 0s;
   @media (max-width: 650px) {
     &:nth-child(1) {
-      height: 100%;
-      // position: absolute;
+      position: absolute;
       background-color: red;
+      height: 100%;
     }
   }
 `;
@@ -51,14 +64,13 @@ const LowerTier = styled.div`
   animation: ${right} 2s ease-in-out 0s;
   @media (max-width: 650px) {
     &:nth-child(2) {
-      // position: absolute;
-      // background-color: red;
       display: none;
     }
   }
 `;
 
-const ImageTile = styled.div`
+const Tile = styled.div`
+  font-weight: 700;
   width: 50%;
   height: 100%;
   background-image: url(${props => props.projectImg});
@@ -69,7 +81,6 @@ const ImageTile = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
   opacity: 0.8;
   :hover {
     opacity: 1;
@@ -78,25 +89,48 @@ const ImageTile = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
+    color: white;
   }
 `;
+
+const P1 = styled.p`
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  width: 5.6em;
+  opacity: 0;
+  animation: ${type} 2s steps(40, end);
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+`;
+const P2 = styled.p`
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid orange;
+  width: 13em;
+  opacity: 0;
+  animation: ${type2} 3s steps(40, end),
+    ${blink} 0.5s step-end infinite alternate;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+`;
+
 const HomePage = () => {
-  const tileImages = [CodeImg];
   return (
     <Page>
       <PageTitle>Welcome To My Portfolio</PageTitle>
       <Container>
         <TopTier>
-          <ImageTile projectImg={CodeImg} />
-          <ImageTile>
+          <Tile projectImg={CodeImg} />
+          <Tile>
             <p>Hi,</p>
-            <p>I'm Burhan,</p>
-            <p>Junior Fullstack Developer</p>
-          </ImageTile>
+            <P1>I'm Burhan,</P1>
+            <P2>Junior Fullstack Developer</P2>
+          </Tile>
         </TopTier>
         <LowerTier>
-          <ImageTile />
-          <ImageTile projectImg={Me} />
+          <Tile />
+          <Tile projectImg={Me} />
         </LowerTier>
       </Container>
     </Page>

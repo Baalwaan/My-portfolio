@@ -28,4 +28,41 @@ const right = keyframes`
  }
 `;
 
-export { left, right };
+const type = keyframes` {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+`;
+
+const type2 = keyframes`
+{
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+`;
+
+const blink = keyframes` {
+  50% {
+    border-color: transparent;
+  }
+}`;
+
+export { left, right, type, type2, blink };
