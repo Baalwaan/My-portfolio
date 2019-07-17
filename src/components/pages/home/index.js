@@ -1,5 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+import { left, right } from './animation/keyframes';
 
 //images
 import CodeImg from '../../../assets/code.png';
@@ -32,11 +34,28 @@ const TopTier = styled.div`
   width: 100%;
   height: 50%;
   display: flex;
+  animation: ${left} 2s ease-in-out 0s;
+  @media (max-width: 650px) {
+    &:nth-child(1) {
+      height: 100%;
+      // position: absolute;
+      background-color: red;
+    }
+  }
 `;
+
 const LowerTier = styled.div`
   width: 100%;
   height: 50%;
   display: flex;
+  animation: ${right} 2s ease-in-out 0s;
+  @media (max-width: 650px) {
+    &:nth-child(2) {
+      // position: absolute;
+      // background-color: red;
+      display: none;
+    }
+  }
 `;
 
 const ImageTile = styled.div`
@@ -44,7 +63,7 @@ const ImageTile = styled.div`
   height: 100%;
   background-image: url(${props => props.projectImg});
   background-repeat: no-repeat;
-  background-size: 95% 95%;
+  background-size: 100% 100%;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -54,6 +73,11 @@ const ImageTile = styled.div`
   opacity: 0.8;
   :hover {
     opacity: 1;
+  }
+  @media (max-width: 650px) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
 `;
 const HomePage = () => {
