@@ -54,9 +54,25 @@ const Button = styled.button`
 `;
 
 const ContactPage = () => {
+  const [name, setName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [phone, setPhone] = React.useState('');
+  const [message, setMessage] = React.useState('');
+
   const handleSubmit = e => {
     e.preventDefault();
-    fetch(`.netlify/functions/email`).catch(error => console.log(error));
+    fetch(`.netlify/functions/email`, {
+      method: 'POST',
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        message
+      }),
+      headers: {
+        'content-type': 'application/json'
+      }
+    }).then(result => result.json());
   };
 
   return (
@@ -65,6 +81,7 @@ const ContactPage = () => {
       <Form onSubmit={handleSubmit}>
         <InputField
           type="text"
+          onChange={event => setName(event.target.value)}
           placeholder="Your name *"
           id="name"
           pattern="^(?=.{1,40}$)[a-zA-Z]+(?:['_.\s][a-z]+)*$"
@@ -73,6 +90,7 @@ const ContactPage = () => {
         />
         <InputField
           type="email"
+          onChange={event => setEmail(event.target.value)}
           placeholder="Your email *"
           id="email"
           name="email"
@@ -81,6 +99,7 @@ const ContactPage = () => {
         />
         <InputField
           type="text"
+          onChange={event => setPhone(event.target.value)}
           placeholder="Your phone *"
           class="form-data"
           name="phone"
@@ -88,6 +107,7 @@ const ContactPage = () => {
         />
         <TextArea
           cols="30"
+          onChange={event => setMessage(event.target.value)}
           rows="10"
           placeholder="Your message..."
           name="message"
