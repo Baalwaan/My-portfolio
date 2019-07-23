@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Redirect } from 'react-router-dom';
 
 const Page = styled.section`
   width: 80vw;
@@ -58,6 +59,7 @@ const ContactPage = () => {
   const [email, setEmail] = React.useState('');
   const [phone, setPhone] = React.useState('');
   const [message, setMessage] = React.useState('');
+  const [sent, setSent] = React.useState(false);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -72,7 +74,10 @@ const ContactPage = () => {
       headers: {
         'content-type': 'application/json'
       }
-    }).then(result => result.json());
+    })
+      .then(result => result.json())
+      .then(setSent(true))
+      .catch(err => console.log(err));
   };
 
   return (
@@ -111,7 +116,9 @@ const ContactPage = () => {
           rows="10"
           placeholder="Your message..."
           name="message"
+          required
         />
+        {sent ? <Redirect to="contact/success" /> : null}
         <Button>Send Message</Button>
       </Form>
     </Page>
