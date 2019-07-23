@@ -1,10 +1,12 @@
 const sendmail = require('sendmail')();
 
+require('dotenv').config();
+
 exports.handler = (event, context, callback) => {
   sendmail(
     {
-      from: 'burhan_1990@hotmail.co.uk',
-      to: 'burhan_1990@hotmail.co.uk',
+      from: process.env.PORTFOLIO_EMAIL,
+      to: process.env.MY_EMAIL,
       subject: 'test sendmail',
       html: 'Mail of test sendmail '
     },
