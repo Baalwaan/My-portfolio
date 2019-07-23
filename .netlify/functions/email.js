@@ -9,7 +9,7 @@ exports.handler = (event, context, callback) => {
     {
       from: process.env.PORTFOLIO_EMAIL,
       to: process.env.MY_EMAIL,
-      subject: 'test sendmail',
+      subject: 'Opportuntiy',
       html: `<h1>Email from potential employer</h1>
       <br><br>
       <ul>
