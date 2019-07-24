@@ -8,14 +8,18 @@ const Container = styled.div`
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  border: solid black 1px;
-  height: 10em;
+  border: solid black 0.5em;
   width: 20em;
+  padding: 1em;
+`;
+const Title = styled.h1`
+  margin-top: 0;
 `;
 
 const SuccessPage = props => {
   return (
     <Container>
+      <Title>Message Sent.</Title>
       <p>
         To go back to home page <Link to="/">click here </Link>
       </p>

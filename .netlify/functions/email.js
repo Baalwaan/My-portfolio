@@ -24,8 +24,17 @@ exports.handler = (event, context, callback) => {
       </div>`
     },
     function(err, reply) {
-      console.log(err && err.stack);
-      console.dir(reply);
+      if (err) {
+        callback(err && err.stack);
+        // console.log(err && err.stack);
+      } else {
+        callback(null, {
+          statusCode: 200,
+          body: JSON.stringify({ mailSent: true })
+        });
+        return;
+      }
+      // console.dir(reply);
     }
   );
 };
