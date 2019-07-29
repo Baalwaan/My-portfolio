@@ -54,13 +54,27 @@ const Button = styled.button`
   color: white;
 `;
 
+const MessageContainer = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  border: solid black 0.5em;
+  width: 20em;
+  padding: 1em;
+`;
+const Title = styled.h1`
+  margin-top: 0;
+`;
+
 const ContactPage = () => {
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [phone, setPhone] = React.useState('');
   const [message, setMessage] = React.useState('');
-  const [sent, setSent] = React.useState(false);
-
+  const [sent, setSent] = React.useState(null);
+  //
   const handleSubmit = e => {
     e.preventDefault();
     fetch(`.netlify/functions/email`, {
@@ -75,9 +89,13 @@ const ContactPage = () => {
         'content-type': 'application/json'
       }
     })
-      .then(result => result.json())
+      .then(res => res.json())
+      .then(res => console.log('this is true ? : ', res.success))
       .then(setSent(true))
-      .catch(err => console.log(err));
+      .catch(err => {
+        setSent(false);
+        console.log(err);
+      });
   };
 
   return (
@@ -106,7 +124,6 @@ const ContactPage = () => {
           type="text"
           onChange={event => setPhone(event.target.value)}
           placeholder="Your phone *"
-          class="form-data"
           name="phone"
           required
         />
@@ -118,7 +135,15 @@ const ContactPage = () => {
           name="message"
           required
         />
-        {sent ? <Redirect to="contact/success" /> : null}
+        {sent === true ? <Redirect to="contact/success" /> : null}
+
+        {sent === false ? (
+          <MessageContainer>
+            <Title>Failed to send message.</Title>
+            <p>Oops, something went wrong. Please try again</p>
+          </MessageContainer>
+        ) : null}
+
         <Button>Send Message</Button>
       </Form>
     </Page>
