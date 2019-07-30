@@ -9,16 +9,13 @@ import CodeImg from '../../../assets/code.png';
 import Me from '../../../assets/me2.jpg';
 
 const Page = styled.section`
+  position: fixed;
   min-height: 90vh;
-  width: 60vw;
+  width: 100vw;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  @media (max-width: 650px) {
-   width: 80vw;
-  }
-}
 `;
 
 const PageTitle = styled.h1`
@@ -30,15 +27,16 @@ const PageTitle = styled.h1`
 
 const Container = styled.div`
   position: relative;
-  width: 100%;
+  width: 60%;
   margin: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   height: 70vh;
   border: solid black 1px;
-  @media (max-width: 650px) {
+  @media (max-width: 710px) {
       height: 50vh;
+      width: 80vw;
     }
   }
 `;
@@ -51,8 +49,9 @@ const TopTier = styled.div`
   @media (max-width: 650px) {
     &:nth-child(1) {
       position: absolute;
-      background-color: red;
+      // background-color: red;
       height: 100%;
+      font-size: 1.2em;
     }
   }
 `;
