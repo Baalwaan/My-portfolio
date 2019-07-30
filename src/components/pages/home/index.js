@@ -49,7 +49,6 @@ const TopTier = styled.div`
   @media (max-width: 650px) {
     &:nth-child(1) {
       position: absolute;
-      // background-color: red;
       height: 100%;
       font-size: 1.2em;
     }
