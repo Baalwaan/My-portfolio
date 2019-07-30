@@ -49,6 +49,7 @@ const HomeButton = styled.button`
   padding: 0.5em;
   font-size: 1.2em;
   width: 15em;
+  outline: none;
 `;
 
 const FormButton = styled.button`
@@ -59,6 +60,7 @@ const FormButton = styled.button`
   padding: 0.5em;
   font-size: 1.2em;
   width: 15em;
+  outline: none;
 `;
 
 const SuccessPage = props => {
