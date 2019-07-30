@@ -12,6 +12,7 @@ const Container = styled.div`
   border: solid black 0.5em;
   border-radius: 5%;
   min-width: 20em;
+
   @media (max-width: 320px) {
     //for iphone 5
     min-width: 17em;
@@ -22,7 +23,6 @@ const Container = styled.div`
 const IconContainer = styled.div`
   background: black;
   text-align: center;
-  padding: 1em;
 `;
 
 const MessageContainer = styled.div`
@@ -42,6 +42,7 @@ const ButtonsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 1em;
 `;
 
 const Button = styled.button`
@@ -61,6 +62,9 @@ const SuccessPage = () => {
     homeButton: {
       color: 'white',
       background: 'black'
+    },
+    FormButton: {
+      background: 'white'
     }
   };
 
@@ -72,20 +76,22 @@ const SuccessPage = () => {
       <MessageContainer>
         <Title>Great!</Title>
         <Message>Message sent. </Message>
-        <ButtonsContainer>
-          <Link to="/">
-            <Button
-              background={buttonStyles.homeButton.background}
-              color={buttonStyles.homeButton.color}
-            >
-              Home
-            </Button>
-          </Link>
-          <Link to="/contact">
-            <Button>New Message</Button>
-          </Link>
-        </ButtonsContainer>
       </MessageContainer>
+      <ButtonsContainer>
+        <Link to="/">
+          <Button
+            background={buttonStyles.homeButton.background}
+            color={buttonStyles.homeButton.color}
+          >
+            Home
+          </Button>
+        </Link>
+        <Link to="/contact">
+          <Button background={buttonStyles.FormButton.background}>
+            New Message
+          </Button>
+        </Link>
+      </ButtonsContainer>
     </Container>
   );
 };
