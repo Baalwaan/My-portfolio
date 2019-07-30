@@ -56,7 +56,7 @@ const Button = styled.button`
   cursor: pointer;
   margin: 5px;
 `;
-const SuccessPage = props => {
+const SuccessPage = () => {
   const buttonStyles = {
     homeButton: {
       color: 'white',
