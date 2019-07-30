@@ -33,13 +33,14 @@ const Title = styled.h1`
   text-align: center;
 `;
 
-const StyledLink = styled(Link)`
-  color: lightblue;
-`;
-
 const Message = styled.p`
   font-size 1.5em;
   text-align: center;
+`;
+
+const ButtonsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const HomeButton = styled.button`
@@ -48,8 +49,9 @@ const HomeButton = styled.button`
   border-radius: 5%;
   padding: 0.5em;
   font-size: 1.2em;
-  width: 15em;
+  width: 10em;
   outline: none;
+  cursor: pointer;
 `;
 
 const FormButton = styled.button`
@@ -59,8 +61,9 @@ const FormButton = styled.button`
   border-radius: 5%;
   padding: 0.5em;
   font-size: 1.2em;
-  width: 15em;
+  width: 10em;
   outline: none;
+  cursor: pointer;
 `;
 
 const SuccessPage = props => {
@@ -72,12 +75,14 @@ const SuccessPage = props => {
       <MessageContainer>
         <Title>Great!</Title>
         <Message>Message sent. </Message>
-        <StyledLink to="/">
-          <HomeButton>Home</HomeButton>{' '}
-        </StyledLink>
-        <StyledLink to="/contact">
-          <FormButton>New Message</FormButton>{' '}
-        </StyledLink>
+        <ButtonsContainer>
+          <Link to="/">
+            <HomeButton>Home</HomeButton>{' '}
+          </Link>
+          <Link to="/contact">
+            <FormButton>New Message</FormButton>{' '}
+          </Link>
+        </ButtonsContainer>
       </MessageContainer>
     </Container>
   );
