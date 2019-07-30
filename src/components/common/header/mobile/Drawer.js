@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-import { ReactComponent as CloseButton } from '../../../../assets/close-button.svg';
+import { ReactComponent as CloseButton } from '../../../../assets/icons/close-button.svg';
 
 const Container = styled.div`
   position: fixed;

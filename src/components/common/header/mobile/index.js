@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Drawer from './Drawer';
 
-import { ReactComponent as MenuIcon } from '../../../../assets/burger-icon.svg';
+import { ReactComponent as MenuIcon } from '../../../../assets/icons/burger-icon.svg';
 
 const Header = styled.nav`
   display: none;

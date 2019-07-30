@@ -2,20 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-// import hi from '';
-import { ReactComponent as SuccessIcon } from '../../../../assets/success.svg';
+import { ReactComponent as SuccessIcon } from '../../../../assets/icons/success.svg';
 
 const Container = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
   border: solid black 0.5em;
   border-radius: 5%;
   min-width: 20em;
-  // padding: 1em black;
-  // background: black;
+  @media (max-width: 320px) {
+    //for iphone 5
+    min-width: 17em;
+    top: 57%;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -29,12 +30,7 @@ const MessageContainer = styled.div`
 `;
 const Title = styled.h1`
   margin-top: 0;
-  // color: white;
   text-align: center;
-`;
-
-const StyledLink = styled(Link)`
-  color: lightblue;
 `;
 
 const Message = styled.p`
@@ -42,28 +38,32 @@ const Message = styled.p`
   text-align: center;
 `;
 
-const HomeButton = styled.button`
-  color: white;
-  background: black;
-  border-radius: 5%;
-  padding: 0.5em;
-  font-size: 1.2em;
-  width: 15em;
-  outline: none;
+const ButtonsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
-const FormButton = styled.button`
-  color: black;
+const Button = styled.button`
+  color: ${props => props.color};
   border: solid black 1px;
-  background: white;
+  background: ${props => props.background};
   border-radius: 5%;
   padding: 0.5em;
   font-size: 1.2em;
-  width: 15em;
+  width: 10em;
   outline: none;
+  cursor: pointer;
+  margin: 5px;
 `;
+const SuccessPage = () => {
+  const buttonStyles = {
+    homeButton: {
+      color: 'white',
+      background: 'black'
+    }
+  };
 
-const SuccessPage = props => {
   return (
     <Container>
       <IconContainer>
@@ -72,12 +72,19 @@ const SuccessPage = props => {
       <MessageContainer>
         <Title>Great!</Title>
         <Message>Message sent. </Message>
-        <StyledLink to="/">
-          <HomeButton>Home</HomeButton>{' '}
-        </StyledLink>
-        <StyledLink to="/contact">
-          <FormButton>New Message</FormButton>{' '}
-        </StyledLink>
+        <ButtonsContainer>
+          <Link to="/">
+            <Button
+              background={buttonStyles.homeButton.background}
+              color={buttonStyles.homeButton.color}
+            >
+              Home
+            </Button>
+          </Link>
+          <Link to="/contact">
+            <Button>New Message</Button>
+          </Link>
+        </ButtonsContainer>
       </MessageContainer>
     </Container>
   );
