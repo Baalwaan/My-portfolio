@@ -38,7 +38,29 @@ const StyledLink = styled(Link)`
 `;
 
 const Message = styled.p`
-  // color: white;
+  font-size 1.5em;
+  text-align: center;
+`;
+
+const HomeButton = styled.button`
+  color: white;
+  background: black;
+  border-radius: 5%;
+  padding: 0.5em;
+  font-size: 1.2em;
+  width: 15em;
+  outline: none;
+`;
+
+const FormButton = styled.button`
+  color: black;
+  border: solid black 1px;
+  background: white;
+  border-radius: 5%;
+  padding: 0.5em;
+  font-size: 1.2em;
+  width: 15em;
+  outline: none;
 `;
 
 const SuccessPage = props => {
@@ -49,10 +71,13 @@ const SuccessPage = props => {
       </IconContainer>
       <MessageContainer>
         <Title>Great!</Title>
-        <Message>
-          To go back to home page <br />
-          <StyledLink to="/">click here </StyledLink>
-        </Message>
+        <Message>Message sent. </Message>
+        <StyledLink to="/">
+          <HomeButton>Home</HomeButton>{' '}
+        </StyledLink>
+        <StyledLink to="/contact">
+          <FormButton>New Message</FormButton>{' '}
+        </StyledLink>
       </MessageContainer>
     </Container>
   );

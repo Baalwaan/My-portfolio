@@ -52,6 +52,7 @@ const Button = styled.button`
   outline: none;
   background: black;
   color: white;
+  border-radius: 5%;
 `;
 
 const MessageContainer = styled.div`
