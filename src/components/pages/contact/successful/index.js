@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 // import hi from '';
-import { ReactComponent as SuccessIcon } from '../../../../assets/success.svg';
+import { ReactComponent as SuccessIcon } from '../../../../assets/icons/success.svg';
 
 const Container = styled.div`
   position: fixed;
