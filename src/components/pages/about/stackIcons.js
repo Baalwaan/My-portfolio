@@ -1,13 +1,21 @@
-import airtable from '../../../assets/logos/airtable.png';
-import handlebars from '../../../assets/logos/handlebars.svg';
-import netlify from '../../../assets/logos/netlify.svg';
-import postgresql from '../../../assets/logos/postgresql.png';
-import react from '../../../assets/logos/react.png';
+import Airtable from '../../../assets/logos/airtable.svg';
+import Handlebars from '../../../assets/logos/handlebars.png';
+import Netlify from '../../../assets/logos/netlify.svg';
+import Postgresql from '../../../assets/logos/postgresql.svg';
+import React from '../../../assets/logos/react.svg';
 import SC from '../../../assets/logos/styledcomponents.jpeg';
-import travis from '../../../assets/logos/travis';
+import Travis from '../../../assets/logos/travis-ci.svg';
 
 // '../../../assets/me3.jpg';
 
-const stack = [airtable, handlebars, netlify, postgresql, react, SC, travis];
+const stack = [
+  { icon: Airtable, name: 'AirTable' },
+  { icon: Handlebars, name: 'Handlebars' },
+  { icon: Netlify, name: 'Netlify' },
+  { icon: Postgresql, name: 'PostgreSql' },
+  { icon: React, name: 'React' },
+  { icon: SC, name: 'Styled Component' },
+  { icon: Travis, name: 'Travis-CI' }
+];
 
 export default stack;

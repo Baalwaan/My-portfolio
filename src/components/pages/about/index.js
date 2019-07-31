@@ -6,7 +6,11 @@ import a from '../../../assets/me3.jpg';
 
 import stack from './stackIcons';
 
+// import ABC from '../../../assets/logos/netlify.svg';
+
 const Container = styled.section`
+  // position: fixed;
+  width: 100vw;
   min-height: 100vh;
   background-color: pink;
   background-image: url(${a});
@@ -38,6 +42,40 @@ const Bio = styled.div`
   text-align: center;
 `;
 
+const IconsContainer = styled.div`
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border: solid yellow 1px;
+`;
+
+const Icon = styled.div`
+  margin: 5px;
+  opacity: 0.6;
+  :hover {
+    opacity: 1;
+  }
+`;
+
+const IconTitle = styled.p`
+  // font-size: 1.2em;
+  color: white;
+`;
+
+const Img = styled.img`
+  width: 3em;
+  height: 3em;
+  object-fit: contain;
+  // opacity: 0;
+
+  // :hover {
+  //   opacity: 1;
+  // }
+`;
+
 const AboutPage = () => (
   <Container>
     <Bio>
@@ -62,6 +100,14 @@ const AboutPage = () => (
         the stack, however I have a strong interest in React and would like to
         develop that further. Ps This is a React portfolio!
       </p>
+      <IconsContainer>
+        {stack.map(obj => (
+          <Icon>
+            <Img src={obj.icon} />
+            <IconTitle>{obj.name}</IconTitle>
+          </Icon>
+        ))}
+      </IconsContainer>
     </Bio>
   </Container>
 );
