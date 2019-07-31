@@ -2,18 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 //image of me
-import a from '../../../assets/me3.jpg';
+import BurhanImage from '../../../assets/me3.jpg';
 
+// array of objects containing techstack Icons, url and info
 import stack from './stackIcons';
 
-// import ABC from '../../../assets/logos/netlify.svg';
-
 const Container = styled.section`
-  // position: fixed;
   width: 100vw;
   min-height: 100vh;
   background-color: pink;
-  background-image: url(${a});
+  background-image: url(${BurhanImage});
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 1px 2000px rgba(20, 10, 10, 0.6);
@@ -21,7 +19,6 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  // align-content: center;
   align-items: flex-end;
 `;
 
@@ -35,10 +32,7 @@ const Title = styled.h1`
 const Bio = styled.div`
   margin: 1em;
   font-size: 1.5em;
-  // width: 18em;
   max-width: 18em;
-  // background: black;
-  // border: solid black 5px;
   text-align: center;
 `;
 
@@ -50,15 +44,16 @@ align-items: center;
 min-width: 100%;
 `;
 const IconsContainer = styled.div`
-  // position: absolute;
-  // bottom: 0;
-  // left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   border: solid yellow 1px;
   background: black;
+`;
+
+const Link = styled.a`
+  text-decoration: none;
 `;
 
 const Icon = styled.div`
@@ -73,7 +68,7 @@ const Icon = styled.div`
   }
 `;
 
-const IconTitle = styled.p`
+const IconTitle = styled.a`
   font-size: 1em;
   color: white;
 `;
@@ -83,11 +78,6 @@ const Img = styled.img`
   width: 4em;
   height: 4em;
   object-fit: contain;
-  // opacity: 0;
-
-  // :hover {
-  //   opacity: 1;
-  // }
 `;
 
 const AboutPage = () => (
@@ -123,10 +113,13 @@ const AboutPage = () => (
         {stack.map((obj, key) => {
           ++key;
           return (
-            <Icon key={key}>
-              <Img src={obj.icon} />
-              <IconTitle>{obj.name}</IconTitle>
-            </Icon>
+            <Link href={obj.url}>
+              <Icon key={key}>
+                <Img src={obj.icon} title={obj.name} alt={`${obj.name} icon`} />
+
+                <IconTitle>{obj.name}</IconTitle>
+              </Icon>
+            </Link>
           );
         }, 0)}
       </IconsContainer>
