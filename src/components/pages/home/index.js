@@ -7,8 +7,14 @@ import { left, right, type, type2, blink } from './animation/keyframes';
 //images
 import CodeImg from '../../../assets/code.png';
 import Me from '../../../assets/me2.jpg';
+import Skyline from '../../../assets/skyline.jpg';
 
 const Page = styled.section`
+  background-image: url(${Skyline});
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 1px 2000px rgba(20, 10, 10, 0.6);
   position: fixed;
   min-height: 90vh;
   width: 100vw;
@@ -33,7 +39,7 @@ const Container = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   height: 70vh;
-  border: solid black 1px;
+  border: solid darkgrey 1px;
   @media (max-width: 710px) {
       height: 50vh;
       width: 80vw;
@@ -68,6 +74,7 @@ const LowerTier = styled.div`
 `;
 
 const Tile = styled.div`
+  background: transparent;
   font-weight: 700;
   width: 50%;
   height: 100%;
@@ -87,7 +94,6 @@ const Tile = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    color: white;
   }
 `;
 
