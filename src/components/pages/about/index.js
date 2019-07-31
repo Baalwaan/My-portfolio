@@ -36,6 +36,10 @@ const Bio = styled.div`
   text-align: center;
 `;
 
+const StyledP = styled.div`
+  font-weight: bold;
+`;
+
 const TechStack = styled.div`
 display: flex;
 justify: content: center;
@@ -54,6 +58,7 @@ const IconsContainer = styled.div`
 
 const Link = styled.a`
   text-decoration: none;
+  font-size: 1.2em;
 `;
 
 const Icon = styled.div`
@@ -102,8 +107,9 @@ const AboutPage = () => (
       <p>
         As a Junior Full Stack developer I am interested in many aspects across
         the stack, however I have a strong interest in React and would like to
-        develop that further. Ps This is a React portfolio!
+        develop that further.
       </p>
+      <StyledP>PS This is a React portfolio!</StyledP>
     </Bio>
     <TechStack>
       <h2>Tech Stack</h2>
