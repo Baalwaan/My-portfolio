@@ -120,12 +120,15 @@ const AboutPage = () => (
       <IconsContainer>
         <br />
         <br />
-        {stack.map(obj => (
-          <Icon>
-            <Img src={obj.icon} />
-            <IconTitle>{obj.name}</IconTitle>
-          </Icon>
-        ))}
+        {stack.map((obj, key) => {
+          ++key;
+          return (
+            <Icon key={key}>
+              <Img src={obj.icon} />
+              <IconTitle>{obj.name}</IconTitle>
+            </Icon>
+          );
+        }, 0)}
       </IconsContainer>
     </TechStack>
   </Container>
