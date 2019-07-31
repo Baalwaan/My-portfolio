@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//image of me
 import a from '../../../assets/me3.jpg';
+
+import stack from './stackIcons';
 
 const Container = styled.section`
   min-height: 100vh;
