@@ -7,13 +7,26 @@ import Tiles from '../../common/projectsTiles';
 //projects data
 import projects from './projectsData';
 
+//background image
+import Skyline from '../../../assets/day.jpg';
+
 const Page = styled.section`
-  width: 80vw;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url(${Skyline});
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 1px 2000px rgba(20, 10, 10, 0.6);
+  color: white;
+`;
+
+const Container = styled.div`
+  width: 80%;
   margin: auto;
 `;
 
 const PageTitle = styled.h1`
-  margin: 0.5em 0 0.5em 0;
+  margin: 0em 0 0.5em 0;
   font-weight: bold;
   text-align: center;
   font-size: 2em;
@@ -24,7 +37,7 @@ const StyledP = styled.p`
   padding: 0.5em;
 `;
 
-const Container = styled.div`
+const ProjectContainer = styled.div`
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -34,20 +47,22 @@ const Container = styled.div`
 const ProjectsPage = () => {
   return (
     <Page>
-      <PageTitle>Projects</PageTitle>
-      <StyledP>Here are some fun projects I have worked on.</StyledP>
       <Container>
-        {projects.map((project, id) => {
-          ++id;
-          return (
-            <Tiles
-              projectName={project.name}
-              projectImg={project.image_path}
-              projectUrl={project.repo_url}
-              key={id}
-            />
-          );
-        }, 0)}
+        <PageTitle>Projects</PageTitle>
+        <StyledP>Here are some fun projects I have worked on.</StyledP>
+        <ProjectContainer>
+          {projects.map((project, id) => {
+            ++id;
+            return (
+              <Tiles
+                projectName={project.name}
+                projectImg={project.image_path}
+                projectUrl={project.repo_url}
+                key={id}
+              />
+            );
+          }, 0)}
+        </ProjectContainer>
       </Container>
     </Page>
   );
