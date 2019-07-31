@@ -9,7 +9,7 @@ const AnchorContainer = styled.div`
   background-size: 95% 95%;
   background-position: center;
   margin: 1em auto;
-  border: solid black 2px;
+  border: solid 2px darkgrey;
 `;
 
 const Anchor = styled.a`
