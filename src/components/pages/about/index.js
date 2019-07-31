@@ -105,8 +105,8 @@ const AboutPage = () => (
       </p>
       <p>
         Being given the opportunity to work within a team to build an
-        application for a product owner Square Circle has given me an insight of
-        working in an agile environment, which I enjoy.
+        application for a product owner has given me an insight of working in an
+        agile environment, which I enjoy.
       </p>
 
       <p>
