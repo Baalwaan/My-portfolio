@@ -42,32 +42,46 @@ const Bio = styled.div`
   text-align: center;
 `;
 
+const TechStack = styled.div`
+display: flex;
+justify: content: center;
+flex-direction: column;
+align-items: center;
+min-width: 100%;
+`;
 const IconsContainer = styled.div`
   // position: absolute;
   // bottom: 0;
   // left: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   border: solid yellow 1px;
+  background: black;
 `;
 
 const Icon = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 5px;
-  opacity: 0.6;
+  opacity: 0.8;
   :hover {
     opacity: 1;
   }
 `;
 
 const IconTitle = styled.p`
-  // font-size: 1.2em;
+  font-size: 1em;
   color: white;
 `;
 
 const Img = styled.img`
-  width: 3em;
-  height: 3em;
+  padding: 1px;
+  width: 4em;
+  height: 4em;
   object-fit: contain;
   // opacity: 0;
 
@@ -100,7 +114,12 @@ const AboutPage = () => (
         the stack, however I have a strong interest in React and would like to
         develop that further. Ps This is a React portfolio!
       </p>
+    </Bio>
+    <TechStack>
+      <h2>Tech Stack</h2>
       <IconsContainer>
+        <br />
+        <br />
         {stack.map(obj => (
           <Icon>
             <Img src={obj.icon} />
@@ -108,7 +127,7 @@ const AboutPage = () => (
           </Icon>
         ))}
       </IconsContainer>
-    </Bio>
+    </TechStack>
   </Container>
 );
 
