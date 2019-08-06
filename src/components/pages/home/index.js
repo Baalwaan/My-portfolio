@@ -15,13 +15,14 @@ const Page = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 1px 2000px rgba(20, 10, 10, 0.6);
-  // position: fixed;
   min-height: 90vh;
   width: 100vw;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  padding-bottom: 1em;
 `;
 
 const PageTitle = styled.h1`
@@ -34,7 +35,6 @@ const PageTitle = styled.h1`
 const Container = styled.div`
   position: relative;
   width: 60%;
-  margin: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -42,7 +42,7 @@ const Container = styled.div`
   border: solid darkgrey 1px;
   @media (max-width: 710px) {
       height: 50vh;
-      width: 80vw;
+      width: 83vw;
     }
   }
 `;
@@ -54,7 +54,7 @@ const TopTier = styled.div`
   animation: ${left} 2s ease-in-out 0s;
   @media (max-width: 650px) {
     &:nth-child(1) {
-      position: absolute;
+      animation: none;
       height: 100%;
       font-size: 1.1em;
     }
