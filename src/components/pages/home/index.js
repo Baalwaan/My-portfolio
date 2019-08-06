@@ -111,7 +111,7 @@ const P2 = styled.p`
   white-space: nowrap;
   overflow: hidden;
   border-right: 1px solid orange;
-  width: 13em;
+  width: 13.2em;
   opacity: 0;
   animation: ${type2} 3s steps(40, end),
     ${blink} 0.5s step-end infinite alternate;
