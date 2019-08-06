@@ -119,8 +119,8 @@ const AboutPage = () => (
         {stack.map((obj, key) => {
           ++key;
           return (
-            <Link href={obj.url} target="_blank">
-              <Icon key={key}>
+            <Link key={key} href={obj.url} target="_blank">
+              <Icon>
                 <Img src={obj.icon} title={obj.name} alt={`${obj.name} icon`} />
 
                 <IconTitle>{obj.name}</IconTitle>
