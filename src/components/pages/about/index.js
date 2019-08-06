@@ -73,7 +73,7 @@ const Icon = styled.div`
   }
 `;
 
-const IconTitle = styled.a`
+const IconTitle = styled.p`
   font-size: 1em;
   color: white;
 `;
