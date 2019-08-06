@@ -15,7 +15,7 @@ const Page = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 1px 2000px rgba(20, 10, 10, 0.6);
-  position: fixed;
+  // position: fixed;
   min-height: 90vh;
   width: 100vw;
   margin: auto;
@@ -56,7 +56,7 @@ const TopTier = styled.div`
     &:nth-child(1) {
       position: absolute;
       height: 100%;
-      font-size: 1.2em;
+      font-size: 1.1em;
     }
   }
 `;
