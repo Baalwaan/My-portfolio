@@ -1,27 +1,25 @@
-import Airtable from '../../../assets/logos/airtable.svg';
+import Airtable from '../../../assets/logos/airtable.png';
 import Handlebars from '../../../assets/logos/handlebars.png';
 import Netlify from '../../../assets/logos/netlify.svg';
 import Postgresql from '../../../assets/logos/postgresql.svg';
-import React from '../../../assets/logos/react.svg';
+import React from '../../../assets/logos/react.png';
 import SC from '../../../assets/logos/styledcomponent.png';
-import Travis from '../../../assets/logos/travis-ci.svg';
+import Travis from '../../../assets/logos/travis.png';
 import Heroku from '../../../assets/logos/heroku.png';
 import Node from '../../../assets/logos/node.png';
 import Express from '../../../assets/logos/express.png';
 import Tape from '../../../assets/logos/tape.png';
 import Jest from '../../../assets/logos/jest.png';
 
-// '../../../assets/me3.jpg';
-
 const stack = [
   {
     icon: Node,
-    name: 'NodeJs',
+    name: 'Node.js',
     url: 'https://nodejs.org/en'
   },
   {
     icon: Express,
-    name: 'Express',
+    name: 'Express.js',
     url: 'https://expressjs.com'
   },
   {
@@ -31,7 +29,7 @@ const stack = [
   },
   {
     icon: SC,
-    name: 'Styled Component',
+    name: 'Styled Components',
     url: 'https://www.styled-components.com'
   },
   {
