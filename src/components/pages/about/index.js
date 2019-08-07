@@ -41,48 +41,41 @@ const StyledP = styled.div`
 `;
 
 const TechStack = styled.div`
-display: flex;
-justify: content: center;
-flex-direction: column;
-align-items: center;
-min-width: 100%;
+  text-align: center;
+  width: 100%;
 `;
 const IconsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
-  border: solid yellow 1px;
+  border-top: solid yellow 1px;
   background: black;
 `;
 
 const Link = styled.a`
-  text-decoration: none;
-  font-size: 1.2em;
-`;
-
-const Icon = styled.div`
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 5px;
-  opacity: 0.8;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  width: 4.5em;
+  margin: 1em;
+  opacity: 0.7;
   :hover {
     opacity: 1;
   }
 `;
 
-const IconTitle = styled.p`
-  font-size: 1em;
-  color: white;
+const Icon = styled.img`
+  width: 100%;
+  height: 3em;
+  object-fit: scale-down;
 `;
 
-const Img = styled.img`
-  padding: 1px;
-  width: 4em;
-  height: 4em;
-  object-fit: contain;
+const IconTitle = styled.span`
+  padding-top: 5px;
+  color: white;
 `;
 
 const AboutPage = () => (
@@ -114,17 +107,12 @@ const AboutPage = () => (
     <TechStack>
       <h2>Tech Stack</h2>
       <IconsContainer>
-        <br />
-        <br />
         {stack.map((obj, key) => {
           ++key;
           return (
             <Link key={key} href={obj.url} target="_blank">
-              <Icon>
-                <Img src={obj.icon} title={obj.name} alt={`${obj.name} icon`} />
-
-                <IconTitle>{obj.name}</IconTitle>
-              </Icon>
+              <Icon src={obj.icon} title={obj.name} alt={`${obj.name} icon`} />
+              <IconTitle>{obj.name}</IconTitle>
             </Link>
           );
         }, 0)}
