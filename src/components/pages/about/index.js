@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 //image of me
-import BurhanImage from '../../../assets/me3.jpg';
+import BurhanImage from '../../../assets/me1.JPG';
 
 // array of objects containing techstack Icons, url and info
 import stack from './stackIcons';
@@ -31,8 +31,8 @@ const Title = styled.h1`
 
 const Bio = styled.div`
   margin: 1em;
-  font-size: 1.5em;
-  max-width: 18em;
+  font-size: 1.2em;
+  max-width: 20em;
   text-align: center;
 `;
 
@@ -83,24 +83,39 @@ const AboutPage = () => (
     <Bio>
       <Title>About Me</Title>
       <p>
-        Graduate Junior Full Stack Developer from Founders & Coders. This
-        programme taught me beyond the scope of coding.
+        A <b>tech curious junior full stack developer</b>, and graduate from
+        Founders & Coders. This program taught me the principles around web
+        development, exploring beyond the scope of coding.
       </p>
       <p>
-        I enjoyed the versatility within the course, from attending meet-ups and
-        interesting conferences, having a mentor, and giving back by teaching /
-        mentoring the new cohort.
+        I enjoyed how versatile my time was on the course, I began with a
+        mentor, and finished, giving back by planning resources, then mentoring
+        the new cohort. During the program I attended meet-ups and interesting
+        conferences, <b> something which our group continues to do</b>.
       </p>
       <p>
-        Being given the opportunity to work within a team to build an
-        application for a product owner has given me an insight of working in an
-        agile environment, which I enjoy.
+        Being given the opportunity to work as <b>QA</b> in our team to build an
+        application for a product owner has given me {''}
+        <b>
+          client facing and team based experience of working in an agile
+          environment
+        </b>
+        , from this I am very aware of processes and understand the importance
+        of clear communication.
       </p>
 
       <p>
-        As a Junior Full Stack developer I am interested in many aspects across
-        the stack, however I have a strong interest in React and would like to
-        develop that further.
+        As <b>an aspiring</b> Junior Full Stack developer I am interested in
+        many aspects across the stack. The interaction between the client-side
+        and server-side made me really curious about how data is handled.
+      </p>
+      <p>
+        Nonetheless, I have a strong interest in <b>React</b> because of the way
+        it makes managing things a lot easier with features like the{' '}
+        <b>virtual DOM</b>, handling data with <b>states</b> and its{' '}
+        <b>component based structure</b>. I am also currently taking an online
+        course ‘Intro to <b>Redux</b>’ and would like to work with React in a
+        new role.
       </p>
       <StyledP>PS This is a React portfolio!</StyledP>
     </Bio>
