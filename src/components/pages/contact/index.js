@@ -108,7 +108,7 @@ const ContactPage = () => {
           onChange={event => setName(event.target.value)}
           placeholder="Your name *"
           id="name"
-          pattern="^(?=.{1,40}$)[a-zA-Z]+(?:['_.\s][a-z]+)*$"
+          pattern="^[a-zA-Z\ \']{0,30}$"
           name="name"
           required
         />
