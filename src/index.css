@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   overflow-x: hidden;
+  background: linear-gradient(to right, rgb(28, 71, 28), rgb(68, 166, 187));
 }
 
 code {
