@@ -2,11 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 //image of me
-import BurhanImage from '../../../assets/me1.JPG';
 import Fac from '../../../assets/fac.jpg';
 import Me from '../../../assets/me2.JPG';
 
-import sq from '../../../assets/projects/square-circle.png';
 // array of objects containing techstack Icons, url and info
 import stack from './stackIcons';
 
@@ -15,15 +13,12 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-items: center;
-  // align-content: center;
   min-height: 100vh;
   width: 100vw;
 `;
 
 const Banner = styled.div`
   position: relative;
-
   background-image: url(${Fac});
   width: 100vw;
   height: 80vh;
@@ -65,7 +60,6 @@ const PageContent = styled.div`
   width: 80vw;
   align-content: center;
   align-items: center;
-  // border: solid green 1px;
 `;
 
 const P = styled.p`
@@ -83,8 +77,6 @@ const Paragraph1Container = styled.div`
   margin: auto;
   width: 80vw;
   align-items: center;
-  // border: solid green 1px;
-  // mediaquery to align-items center
 `;
 const P1 = styled.p`
   padding: 0em;
@@ -103,9 +95,7 @@ const IMG = styled.img`
 
 const P2 = styled.p`
   padding: 0em;
-  // padding: 0 1.5em;
   margin: 0.5em;
-  // max-width: 25em;
   font-size: 1.3em;
   line-height: 1.4;
 `;
@@ -113,19 +103,13 @@ const P2 = styled.p`
 const TechStack = styled.div`
   text-align: center;
   width: 100%;
-  // background: white;
-  // background: rgb(5, 121, 52);
   color: black;
-  // border-top: solid 4px rgb(68, 166, 187);
 `;
 const IconsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  // border-top: solid yellow 1px;
   background: rgb(5, 121, 52);
-  // background: white;
-  // background: rgb(109, 242);
   border-top: solid 4px rgb(68, 166, 187);
 `;
 
@@ -138,10 +122,6 @@ const Link = styled.a`
   font-size: 1em;
   width: 4.5em;
   margin: 1em;
-  // opacity: 0.7;
-  // :hover {
-  //   opacity: 1;
-  // }
 `;
 
 const Icon = styled.img`
