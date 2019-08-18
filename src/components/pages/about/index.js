@@ -180,7 +180,10 @@ const AboutPage = () => (
         makes managing things a lot easier with features like the virtual DOM,
         handling data with states and its component based structure. I am also
         currently taking an online course ‘Intro to Redux’ and would like to
-        work with React in a new role. PS This is a React portfolio!
+        work with React in a new role.
+        <br />
+        <br />
+        <b>PS This is a React portfolio!</b>
       </P2>
     </PageContent>
 
