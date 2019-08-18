@@ -57,7 +57,7 @@ const Drawer = ({ burgerActive, setBurgerActive }) => {
           Home
         </Link>
 
-        <Link to="/about" onClick={updateBurgerState}>
+        <Link to="/#about-me" onClick={updateBurgerState}>
           About Me
         </Link>
 
