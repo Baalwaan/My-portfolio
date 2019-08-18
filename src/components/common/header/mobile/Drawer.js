@@ -18,6 +18,7 @@ const Container = styled.div`
   font-size: 2em;
   font-weight: bold;
   transition: all 1s ease;
+  z-index:1;
 `;
 
 const MenuContainer = styled.div`

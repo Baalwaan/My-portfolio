@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Header from '../../common/header';
+
 //image of me
 import Fac from '../../../assets/fac.jpg';
 import Me from '../../../assets/me2.JPG';
@@ -25,7 +27,7 @@ const Banner = styled.div`
   background-size: cover;
   color: white;
   opacity: 1;
-  z-index: 1;
+  z-index: 0;
   margin-bottom: 2em;
 `;
 
@@ -141,7 +143,8 @@ const IconTitle = styled.span`
 `;
 
 const AboutPage = () => (
-  <Container>
+  <Container id="aboutme">
+    <Header />
     <Banner>
       <BannerOverlay>
         <BannerContent>

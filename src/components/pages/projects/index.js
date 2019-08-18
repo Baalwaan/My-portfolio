@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 //common component
+import Header from '../../common/header';
 import Tiles from '../../common/projectsTiles';
 
 //projects data
@@ -47,6 +48,7 @@ const ProjectContainer = styled.div`
 const ProjectsPage = () => {
   return (
     <Page>
+      <Header />
       <Container>
         <PageTitle>Projects</PageTitle>
         <StyledP>Here are some fun projects I have worked on.</StyledP>

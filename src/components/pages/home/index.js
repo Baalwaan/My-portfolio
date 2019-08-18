@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import Particles from 'react-particles-js';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
+import AboutPage from '../about';
+import Header from '../../common/header';
+
 //keyframes for type effect and background animations in animation folder
 import { typing, blink } from './animation/keyframes';
 import particleOpt from './animation/particleOpt';
@@ -109,6 +112,8 @@ const HomePage = () => {
 
         <StyledParticles width="100vw" params={particleOpt} />
       </LandingPage>
+      {/* <Header /> */}
+      <AboutPage />
     </>
   );
 };

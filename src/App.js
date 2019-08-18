@@ -12,11 +12,12 @@ import ContactPage from './components/pages/contact';
 import SuccessPage from './components/pages/contact/successful';
 
 const App = () => {
+  const [homePage, istHomePage] = React.useState(false);
+
   return (
     <Router>
-      <Header />
       <Route exact path="/" component={HomePage} />
-      <Route exact path="/about" component={AboutPage} />
+      {/* <Route exact path="/about" component={AboutPage} /> */}
       <Route exact path="/projects" component={ProjectsPage} />
       <Route exact path="/contact" component={ContactPage} />
       <Route exact path="/contact/success" component={SuccessPage} />

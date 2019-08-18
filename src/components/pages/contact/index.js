@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Redirect } from 'react-router-dom';
 
+import Header from '../../common/header';
+
 const Page = styled.section`
-  width: 80vw;
+  width: 100vw;
   margin: auto;
 `;
 const PageTitle = styled.h1`
@@ -101,6 +103,7 @@ const ContactPage = () => {
 
   return (
     <Page>
+      <Header />
       <PageTitle>Get in Touch...</PageTitle>
       <Form onSubmit={handleSubmit}>
         <InputField
