@@ -5,7 +5,7 @@ import Header from '../../common/header';
 
 //image of me
 import Fac from '../../../assets/fac.jpg';
-import Me from '../../../assets/me2.JPG';
+import Me from '../../../assets/me2.jpg';
 
 // array of objects containing techstack Icons, url and info
 import stack from './stackIcons';

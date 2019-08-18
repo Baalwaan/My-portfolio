@@ -20,7 +20,7 @@ const Header = styled.nav`
 `;
 
 const MenuContainer = styled.div`
-  margin: 1em;
+  padding: 1em;
   cursor: pointer;
 `;
 
