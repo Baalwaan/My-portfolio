@@ -14,11 +14,13 @@ import Skyline from '../../../assets/day.jpg';
 const Page = styled.section`
   width: 100vw;
   min-height: 100vh;
-  background-image: url(${Skyline});
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: inset 1px 2000px rgba(20, 10, 10, 0.6);
+  // background: white;
+  // background-image: url(${Skyline});
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // box-shadow: inset 1px 2000px rgba(20, 10, 10, 0.6);
   color: white;
+  // color: black;
 `;
 
 const Container = styled.div`

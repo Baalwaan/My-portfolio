@@ -2,18 +2,16 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 //Common Components
-import Header from './components/common/header';
+// import Header from './components/common/header';
 
 //Pages
 import HomePage from './components/pages/home';
 import ProjectsPage from './components/pages/projects';
-import AboutPage from './components/pages/about';
+// import AboutPage from './components/pages/about';
 import ContactPage from './components/pages/contact';
 import SuccessPage from './components/pages/contact/successful';
 
 const App = () => {
-  const [homePage, istHomePage] = React.useState(false);
-
   return (
     <Router>
       <Route exact path="/" component={HomePage} />

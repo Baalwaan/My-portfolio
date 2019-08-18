@@ -64,14 +64,6 @@ const PageContent = styled.div`
   align-items: center;
 `;
 
-const P = styled.p`
-  padding: 0;
-  margin: 0.5em;
-  line-height: 1.4;
-  font-size: 1.2em;
-  width: 80%;
-`;
-
 const Paragraph1Container = styled.div`
   display: flex;
   justify-content: center;
@@ -143,7 +135,7 @@ const IconTitle = styled.span`
 `;
 
 const AboutPage = () => (
-  <Container id="aboutme">
+  <Container id="about-me">
     <Header />
     <Banner>
       <BannerOverlay>

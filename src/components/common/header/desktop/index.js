@@ -50,7 +50,7 @@ const DesktopHeader = () => {
         <Link to="/#/" title="Home">
           Home
         </Link>
-        <Link to="/#aboutme" title="About Me Page">
+        <Link to="/#about-me" title="About Me Page">
           About me
         </Link>
         <Link to="/projects" title="Projects Page">
