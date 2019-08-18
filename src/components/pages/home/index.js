@@ -97,7 +97,7 @@ const Arrow = styled.b`
 const HomePage = () => {
   return (
     <>
-      <LandingPage id="home">
+      <LandingPage id="/">
         <IntroTile>
           <P1>
             Hi, I'm <Name>Burhan Baalwaan</Name>.{' '}
