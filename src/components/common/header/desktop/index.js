@@ -3,19 +3,30 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const Header = styled.nav`
+  color: white;
   display: none;
   position: sticky;
   top: 0;
+  width: 100vw;
   z-index: 1;
-  min-height: 70px;
-  border-bottom: black solid 1px;
+  border-bottom: rgb(68, 166, 187) solid 4px;
   text-align: right;
-  background-color: black;
+  background-color: rgb(16, 61, 16);
   @media (min-width: 650px) {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: block;
   }
+`;
+
+const MenuContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 50%;
+  z-index: 1;
+  text-align: right;
 `;
 
 const Link = styled(NavLink)`
@@ -23,30 +34,32 @@ const Link = styled(NavLink)`
   font-weight: bold;
   font-size: 1.2em;
   cursor: pointer;
-  color: lightgray;
   text-decoration: none;
-  border-bottom: solid 1px transparent;
+  border-bottom: solid 2px transparent;
+  margin: 1em;
   :hover {
-    color: white;
-    border-bottom: solid white 2px;
+    color: rgb(247, 245, 124);
+    border-bottom: solid 2px rgb(247, 245, 124);
   }
 `;
 
 const DesktopHeader = () => {
   return (
     <Header>
-      <Link to="/" title="Home">
-        Home
-      </Link>
-      <Link to="/about" title="About Me Page">
-        About me
-      </Link>
-      <Link to="/projects" title="Projects Page">
-        Projects
-      </Link>
-      <Link to="/contact" title="Contact Page">
-        Contact
-      </Link>
+      <MenuContainer>
+        <Link to="/" title="Home">
+          Home
+        </Link>
+        <Link to="/about" title="About Me Page">
+          About me
+        </Link>
+        <Link to="/projects" title="Projects Page">
+          Projects
+        </Link>
+        <Link to="/contact" title="Contact Page">
+          Contact
+        </Link>
+      </MenuContainer>
     </Header>
   );
 };
