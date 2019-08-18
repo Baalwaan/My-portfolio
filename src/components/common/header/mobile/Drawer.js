@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-import { ReactComponent as CloseButton } from '../../../../assets/icons/close-button.svg';
+import CloseButton from '../../../../assets/icons/close-button.png';
 
 const Container = styled.div`
   position: fixed;
@@ -13,11 +13,13 @@ const Container = styled.div`
   justify-content: space-around;
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  // background-color: black;
+  background:rgb(39, 158, 137);
   color: white;
   font-size: 2em;
   font-weight: bold;
   transition: all 1s ease;
+  z-index:1;
 `;
 
 const MenuContainer = styled.div`
@@ -28,10 +30,10 @@ const MenuContainer = styled.div`
 
 const Link = styled(NavLink)`
   margin: 1em auto;
-  color: lightgray;
+  color: white;
   text-decoration: none;
   :active {
-    color: white;
+    color: rgb(247, 245, 124);
   }
 `;
 
@@ -44,14 +46,18 @@ const Drawer = ({ burgerActive, setBurgerActive }) => {
     <>
       <Container burgerActive={burgerActive}>
         <MenuContainer>
-          <CloseButton onClick={updateBurgerState} />
+          <img
+            src={CloseButton}
+            onClick={updateBurgerState}
+            alt="Close Menu Button"
+          />
         </MenuContainer>
 
         <Link to="/" onClick={updateBurgerState}>
           Home
         </Link>
 
-        <Link to="/about" onClick={updateBurgerState}>
+        <Link to="/#about-me" onClick={updateBurgerState}>
           About Me
         </Link>
 

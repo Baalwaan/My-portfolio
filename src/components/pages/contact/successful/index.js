@@ -9,7 +9,8 @@ const Container = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: solid black 0.5em;
+  // border: solid black 0.5em;
+  border: solid rgb(16, 61, 16) 0.5em;
   border-radius: 5%;
   min-width: 20em;
 
@@ -21,12 +22,14 @@ const Container = styled.div`
 `;
 
 const IconContainer = styled.div`
-  background: black;
+  // background: black;
+  background-color: rgb(16, 61, 16);
   text-align: center;
 `;
 
 const MessageContainer = styled.div`
   padding: 1em;
+  color: white;
 `;
 const Title = styled.h1`
   margin-top: 0;
@@ -56,12 +59,16 @@ const Button = styled.button`
   outline: none;
   cursor: pointer;
   margin: 5px;
+  :hover {
+    background: #79cadc;
+    transition: 1s;
+  }
 `;
 const SuccessPage = () => {
   const buttonStyles = {
     homeButton: {
-      color: 'white',
-      background: 'black'
+      color: 'rgb(247, 245, 124)',
+      background: 'rgb(16, 61, 16)'
     },
     FormButton: {
       background: 'white'

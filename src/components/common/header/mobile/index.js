@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Drawer from './Drawer';
 
-import { ReactComponent as MenuIcon } from '../../../../assets/icons/burger-icon.svg';
+import MenuIcon from '../../../../assets/icons/burger-icon.png';
 
 const Header = styled.nav`
   display: none;
@@ -11,16 +11,18 @@ const Header = styled.nav`
   top: 0;
   z-index: 1;
   min-height: 70px;
-  border-bottom: black solid 1px;
+  // border-bottom: black solid 1px;
+  border-bottom: rgb(68, 166, 187) solid 4px;
   text-align: right;
-  background-color: white;
+  // background-color: white;
+  background-color: rgb(16, 61, 16);
   @media (max-width: 649px) {
     display: block;
   }
 `;
 
 const MenuContainer = styled.div`
-  margin: 1em;
+  padding: 1em;
   cursor: pointer;
 `;
 
@@ -33,7 +35,11 @@ const MobileHeader = () => {
   return (
     <Header>
       <MenuContainer>
-        <MenuIcon onClick={handleBurgerState} />
+        <img
+          src={MenuIcon}
+          onClick={handleBurgerState}
+          alt="Open Menu Button"
+        />
       </MenuContainer>
       <Drawer burgerActive={burgerActive} setBurgerActive={setBurgerActive} />
     </Header>

@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Redirect } from 'react-router-dom';
 
+import Header from '../../common/header';
+
 const Page = styled.section`
-  width: 80vw;
+  width: 100vw;
   margin: auto;
 `;
 const PageTitle = styled.h1`
@@ -11,6 +13,7 @@ const PageTitle = styled.h1`
   font-weight: bold;
   text-align: center;
   font-size: 2em;
+  color: white;
 `;
 
 const Form = styled.form`
@@ -18,7 +21,7 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   padding-bottom: 1.25em;
-  max-width: 25em;
+  max-width: 22em;
   margin: auto;
 `;
 
@@ -30,6 +33,8 @@ const InputField = styled.input`
   border: solid black;
   text-indent: 1em;
   margin-bottom: 1em;
+  // background: grey;
+  // color: white;
 `;
 
 const TextArea = styled.textarea`
@@ -41,25 +46,27 @@ const TextArea = styled.textarea`
   resize: none;
   text-indent: 1em;
   margin-bottom: 1em;
-  }
 `;
 
 const Button = styled.button`
-  padding: 1.25em;
-  min-width: 11em;
-  font-size: 0.8em;
-  cursor: pointer;
-  outline: none;
-  background: black;
+  width: 8em;
+  padding: 0.2em;
+  margin-top: 0.8em;
+  border: solid white 2px;
+  background: transparent;
   color: white;
-  border-radius: 5%;
+  font-size: 1.5em;
+  cursor: pointer;
+  :hover {
+    background: #79cadc;
+    transition: 1s;
+  }
 `;
 
 const MessageContainer = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
   border: solid black 0.5em;
   width: 20em;
@@ -101,6 +108,7 @@ const ContactPage = () => {
 
   return (
     <Page>
+      <Header />
       <PageTitle>Get in Touch...</PageTitle>
       <Form onSubmit={handleSubmit}>
         <InputField

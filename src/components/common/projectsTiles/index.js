@@ -24,8 +24,8 @@ const Anchor = styled.a`
   align-items: center;
 
   :hover {
-    background: black;
-    opacity: 0.8;
+    background: rgb(5, 121, 52);
+    opacity: 0.9;
   }
 `;
 
