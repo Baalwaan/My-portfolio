@@ -88,7 +88,7 @@ const ProjectsPage = () => {
             <PageTitle>Projects</PageTitle>
             On this page you will find some interesting projects that I have
             worked on. Some of which are personal projects and some group group
-            projects. Feel free to visit The github repositories where you can
+            projects. Feel free to visit the github repositories where you can
             see both the code base and live versions.
           </BannerContent>
         </BannerOverlay>
