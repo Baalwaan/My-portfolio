@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Header from '../../common/header';
 
 //image of me
-import Fac from '../../../assets/fac.jpg';
+import Fac from '../../../assets/fac.jpeg';
 import Me from '../../../assets/me2.jpg';
 
 // array of objects containing techstack Icons, url and info
@@ -23,7 +23,7 @@ const Banner = styled.div`
   position: relative;
   background-image: url(${Fac});
   width: 100vw;
-  height: 80vh;
+  height: 75vh;
   background-size: cover;
   color: white;
   opacity: 1;
@@ -52,6 +52,10 @@ const BannerContent = styled.div`
   max-width: 20em;
   font-size: 1.5em;
   font-weight bolder;
+`;
+
+const PageTitle = styled.h1`
+  color: rgb(247, 245, 124);
 `;
 
 const PageContent = styled.div`
@@ -140,7 +144,7 @@ const AboutPage = () => (
     <Banner>
       <BannerOverlay>
         <BannerContent>
-          <h1>ABOUT ME</h1>
+          <PageTitle>ABOUT ME</PageTitle>
           {/* <P> */}A tech curious junior full stack developer, and graduate
           from Founders & Coders. This program taught me the principles around
           web development, exploring beyond the scope of coding.

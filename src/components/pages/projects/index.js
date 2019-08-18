@@ -9,18 +9,53 @@ import Tiles from '../../common/projectsTiles';
 import projects from './projectsData';
 
 //background image
-import Skyline from '../../../assets/day.jpg';
+import Code from '../../../assets/code.png';
 
 const Page = styled.section`
   width: 100vw;
   min-height: 100vh;
-  // background: white;
-  // background-image: url(${Skyline});
+  background: white;
+  // background-image: url(${Code});
   // background-repeat: no-repeat;
   // background-size: cover;
   // box-shadow: inset 1px 2000px rgba(20, 10, 10, 0.6);
   color: white;
   // color: black;
+`;
+
+const Banner = styled.div`
+  position: relative;
+  background-image: url(${Code});
+  width: 100vw;
+  height: 65vh;
+  background-size: cover;
+  color: white;
+  opacity: 1;
+  z-index: 0;
+  margin-bottom: 2em;
+`;
+
+const BannerOverlay = styled.div`
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(5, 121, 52, 0.6);
+  display: flex;
+  align-items: flex-end;
+`;
+
+const BannerContent = styled.div`
+  padding: 1em;
+  width: 30em;
+  display: flex;
+  flex-direction: column;
+  max-width: 20em;
+  font-size: 1.5em;
+  font-weight bolder;
 `;
 
 const Container = styled.div`
@@ -29,12 +64,8 @@ const Container = styled.div`
 `;
 
 const PageTitle = styled.h1`
-  margin: 0em 0 0.5em 0;
-  font-weight: bold;
-  text-align: center;
-  font-size: 2em;
+  color: rgb(247, 245, 124);
 `;
-
 const StyledP = styled.p`
   font-size: 1.5em;
   padding: 0.5em;
@@ -51,8 +82,19 @@ const ProjectsPage = () => {
   return (
     <Page>
       <Header />
+      <Banner>
+        <BannerOverlay>
+          <BannerContent>
+            <PageTitle>Projects</PageTitle>
+            On this page you will find some interesting projects that I have
+            worked on. Some of which are personal projects and some group group
+            projects. Feel free to visit The github repositories where you can
+            see both the code base and live versions.
+          </BannerContent>
+        </BannerOverlay>
+      </Banner>
+
       <Container>
-        <PageTitle>Projects</PageTitle>
         <StyledP>Here are some fun projects I have worked on.</StyledP>
         <ProjectContainer>
           {projects.map((project, id) => {
