@@ -59,12 +59,16 @@ const Button = styled.button`
   outline: none;
   cursor: pointer;
   margin: 5px;
+  :hover {
+    background: #79cadc;
+    transition: 1s;
+  }
 `;
 const SuccessPage = () => {
   const buttonStyles = {
     homeButton: {
-      color: 'white',
-      background: 'black'
+      color: 'rgb(247, 245, 124)',
+      background: 'rgb(16, 61, 16)'
     },
     FormButton: {
       background: 'white'
