@@ -59,10 +59,7 @@ const Button = styled.button`
   cursor: pointer;
   :hover {
     background: #79cadc;
-  }
-  :hover > :first-child {
-    transform: rotate(90deg);
-    transition: all 1s;
+    transition: 1s;
   }
 `;
 
