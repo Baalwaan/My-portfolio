@@ -59,7 +59,7 @@ const P2 = styled.p`
     font-size: 1.5em;
   }
   @media only screen and (max-width: 460px) {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   @media only screen and (max-width: 350px) {
     font-size: 1.2em;
