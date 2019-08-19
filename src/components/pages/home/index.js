@@ -56,10 +56,10 @@ const P2 = styled.p`
   animation-delay: 2s;
   animation-fill-mode: forwards;
   @media only screen and (max-width: 525px) {
-    font-size: 1.75em;
+    font-size: 1.5em;
   }
   @media only screen and (max-width: 460px) {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
   @media only screen and (max-width: 350px) {
     font-size: 1.2em;
@@ -67,7 +67,7 @@ const P2 = styled.p`
 `;
 
 const Button = styled.div`
-  width: 8em;
+  width: 8.5em;
   padding: 0.2em;
   margin-top: 1.5em;
   border: solid white 2px;
