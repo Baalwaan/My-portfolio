@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 //common component
-import Header from '../../common/header';
 import Tiles from '../../common/projectsTiles';
 
 //projects data
@@ -27,7 +26,7 @@ const Banner = styled.div`
   position: relative;
   background-image: url(${Code});
   width: 100vw;
-  height: 65vh;
+  height: 75vh;
   background-size: cover;
   color: white;
   opacity: 1;
@@ -81,7 +80,6 @@ const ProjectContainer = styled.div`
 const ProjectsPage = () => {
   return (
     <Page>
-      <Header />
       <Banner>
         <BannerOverlay>
           <BannerContent>

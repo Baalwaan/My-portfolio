@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Header from '../../common/header';
-
 //image of me
 import Fac from '../../../assets/fac.jpeg';
 import Me from '../../../assets/me2.jpg';
@@ -140,7 +138,6 @@ const IconTitle = styled.span`
 
 const AboutPage = () => (
   <Container id="about-me">
-    <Header />
     <Banner>
       <BannerOverlay>
         <BannerContent>
