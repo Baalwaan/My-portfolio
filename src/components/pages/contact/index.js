@@ -4,10 +4,9 @@ import { Redirect } from 'react-router-dom';
 
 const Page = styled.section`
   width: 100vw;
-  margin: auto;
 `;
 const PageTitle = styled.h1`
-  margin: 0.5em 0 0.5em 0;
+  margin: 3em 0 0.5em 0;
   font-weight: bold;
   text-align: center;
   font-size: 2em;

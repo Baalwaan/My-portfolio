@@ -21,8 +21,6 @@ const MenuContainer = styled.div`
   display: flex;
   justify-content: space-around;
   color: white;
-  display: flex;
-  position: sticky;
   top: 0;
   width: 50%;
   z-index: 1;
@@ -36,7 +34,7 @@ const Link = styled(NavLink)`
   cursor: pointer;
   text-decoration: none;
   border-bottom: solid 2px transparent;
-  margin: 1em;
+  margin: 1em 0 1em 0.4em;
   :hover {
     color: rgb(247, 245, 124);
     border-bottom: solid 2px rgb(247, 245, 124);
