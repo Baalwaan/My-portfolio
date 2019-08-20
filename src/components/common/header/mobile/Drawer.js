@@ -57,9 +57,9 @@ const Drawer = ({ burgerActive, setBurgerActive }) => {
           Home
         </Link>
 
-        <Link to="/#about-me" onClick={updateBurgerState}>
+        {/* <Link to="/#about-me" onClick={updateBurgerState}>
           About Me
-        </Link>
+        </Link> */}
 
         <Link to="/projects" onClick={updateBurgerState}>
           Projects

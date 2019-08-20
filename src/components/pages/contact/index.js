@@ -2,14 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Redirect } from 'react-router-dom';
 
-import Header from '../../common/header';
-
 const Page = styled.section`
   width: 100vw;
-  margin: auto;
 `;
 const PageTitle = styled.h1`
-  margin: 0.5em 0 0.5em 0;
   font-weight: bold;
   text-align: center;
   font-size: 2em;
@@ -20,7 +16,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 1.25em;
+  padding: 1em;
   max-width: 22em;
   margin: auto;
 `;
@@ -108,7 +104,6 @@ const ContactPage = () => {
 
   return (
     <Page>
-      <Header />
       <PageTitle>Get in Touch...</PageTitle>
       <Form onSubmit={handleSubmit}>
         <InputField

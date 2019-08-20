@@ -32,6 +32,7 @@ const IntroTile = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 5em;
 `;
 
 const P1 = styled.p`
@@ -96,7 +97,7 @@ const Arrow = styled.b`
 const HomePage = () => {
   return (
     <>
-      <LandingPage id="/">
+      <LandingPage id="nav-bar-location">
         <IntroTile>
           <P1>
             Hi, I'm <Name>Burhan Baalwaan</Name>.{' '}
@@ -111,7 +112,6 @@ const HomePage = () => {
 
         <StyledParticles width="100vw" params={particleOpt} />
       </LandingPage>
-      {/* <Header /> */}
       <AboutPage />
     </>
   );

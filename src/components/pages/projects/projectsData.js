@@ -1,6 +1,6 @@
 import SquareCircleImg from '../../../assets/projects/square-circle.png';
 import GithubCardsImg from '../../../assets/projects/github-cards.png';
-import QuizAppImg from '../../../assets/projects/react-quiz.png';
+import StarGameImg from '../../../assets/projects/react-star-game.png';
 import RemindlyImg from '../../../assets/projects/remindly.png';
 import AuthProjectImg from '../../../assets/projects/auth.png';
 import SmoothieImg from '../../../assets/projects/smoothie-bar.png';
@@ -10,7 +10,7 @@ import FavWorkoutImg from '../../../assets/projects/fav-workout.png';
 
 const squareCircleUrl = 'https://github.com/FAC-Sixteen/square-circle';
 const githubCardsUrl = 'https://github.com/Baalwaan/Github-profile-cards';
-const quizApp = 'https://github.com/Baalwaan/b-b';
+const StarGameUrl = 'https://github.com/Baalwaan/star-game';
 const remindlyUrl = 'https://github.com/Baalwaan/Remindly';
 const authUrl = 'https://github.com/Baalwaan/Authentication-By-Me';
 const smootieUrl = 'https://github.com/Baalwaan/Smoothie-bar';
@@ -29,9 +29,9 @@ const projects = [
     repo_url: githubCardsUrl
   },
   {
-    name: 'React Quiz App (TRVIA)',
-    image_path: QuizAppImg,
-    repo_url: quizApp
+    name: 'React Star Game',
+    image_path: StarGameImg,
+    repo_url: StarGameUrl
   },
   { name: 'Remindly App', image_path: RemindlyImg, repo_url: remindlyUrl },
   {

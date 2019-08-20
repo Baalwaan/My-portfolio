@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
 const Header = styled.nav`
   color: white;
   display: none;
-  position: sticky;
-  top: 0;
+  // position: absolute;
+  // top: 0;
   width: 100vw;
   z-index: 1;
   border-bottom: rgb(68, 166, 187) solid 4px;
@@ -21,8 +21,6 @@ const MenuContainer = styled.div`
   display: flex;
   justify-content: space-around;
   color: white;
-  display: flex;
-  position: sticky;
   top: 0;
   width: 50%;
   z-index: 1;
@@ -36,7 +34,7 @@ const Link = styled(NavLink)`
   cursor: pointer;
   text-decoration: none;
   border-bottom: solid 2px transparent;
-  margin: 1em;
+  margin: 1em 0 1em 0.4em;
   :hover {
     color: rgb(247, 245, 124);
     border-bottom: solid 2px rgb(247, 245, 124);
@@ -47,12 +45,12 @@ const DesktopHeader = () => {
   return (
     <Header>
       <MenuContainer>
-        <Link to="/#/" title="Home">
+        <Link to="/" title="Home">
           Home
         </Link>
-        <Link to="/#about-me" title="About Me Page">
+        {/* <Link to="/#about-me" title="About Me Page">
           About me
-        </Link>
+        </Link> */}
         <Link to="/projects" title="Projects Page">
           Projects
         </Link>
