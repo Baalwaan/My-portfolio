@@ -7,9 +7,9 @@ import MenuIcon from '../../../../assets/icons/burger-icon.png';
 
 const Header = styled.nav`
   display: none;
-  position: absolute;
+  // position: absolute;
   width: 100vw;
-  top: 0;
+  // top: 0;
   z-index: 1;
   min-height: 70px;
   // border-bottom: black solid 1px;

@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
 const Header = styled.nav`
   color: white;
   display: none;
-  position: absolute;
-  top: 0;
+  // position: absolute;
+  // top: 0;
   width: 100vw;
   z-index: 1;
   border-bottom: rgb(68, 166, 187) solid 4px;
