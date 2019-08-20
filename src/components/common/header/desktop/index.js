@@ -45,7 +45,7 @@ const DesktopHeader = () => {
   return (
     <Header>
       <MenuContainer>
-        <Link to="/#/" title="Home">
+        <Link to="/" title="Home">
           Home
         </Link>
         <Link to="/#about-me" title="About Me Page">

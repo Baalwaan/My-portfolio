@@ -97,7 +97,7 @@ const Arrow = styled.b`
 const HomePage = () => {
   return (
     <>
-      <LandingPage id="/">
+      <LandingPage>
         <IntroTile>
           <P1>
             Hi, I'm <Name>Burhan Baalwaan</Name>.{' '}
@@ -112,7 +112,6 @@ const HomePage = () => {
 
         <StyledParticles width="100vw" params={particleOpt} />
       </LandingPage>
-      {/* <Header /> */}
       <AboutPage />
     </>
   );

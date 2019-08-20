@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 //image of me
 import Fac from '../../../assets/fac.jpeg';
@@ -96,6 +97,34 @@ const P2 = styled.p`
   line-height: 1.4;
 `;
 
+const Button = styled.div`
+  width: 7em;
+  padding: 0.2em;
+  margin-top: 1.5em;
+  border: solid rgb(5, 121, 52) 2px;
+  background: transparent;
+  color: black;
+  font-size: 1.2em;
+  cursor: pointer;
+  :hover {
+    background: #79cadc;
+  }
+  :hover > :first-child {
+    transform: rotate(-90deg);
+    transition: all 1s;
+  }
+`;
+
+const Arrow = styled.b`
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  color: black;
+  transition: all 1s ease;
+  font-weight: bold;
+`;
+
 const TechStack = styled.div`
   text-align: center;
   width: 100%;
@@ -182,6 +211,15 @@ const AboutPage = () => (
         <br />
         <b>PS This is a React portfolio!</b>
       </P2>
+      <AnchorLink
+        offset="100"
+        href="#nav-bar-location"
+        style={{ textDecoration: 'none' }}
+      >
+        <Button>
+          Back to top <Arrow>→</Arrow>
+        </Button>
+      </AnchorLink>
     </PageContent>
 
     <TechStack>
