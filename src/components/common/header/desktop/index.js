@@ -48,9 +48,9 @@ const DesktopHeader = () => {
         <Link to="/" title="Home">
           Home
         </Link>
-        <Link to="/#about-me" title="About Me Page">
+        {/* <Link to="/#about-me" title="About Me Page">
           About me
-        </Link>
+        </Link> */}
         <Link to="/projects" title="Projects Page">
           Projects
         </Link>
