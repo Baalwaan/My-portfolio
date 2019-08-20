@@ -20,7 +20,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 1.25em;
+  padding: 1em;
   max-width: 22em;
   margin: auto;
 `;
