@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 //common component
 import Tiles from '../../common/projectsTiles';
+import Modal from '../../common/projectModals/';
 
 //projects data
 import projects from './projectsData';
@@ -78,16 +79,20 @@ const ProjectContainer = styled.div`
 `;
 
 const ProjectsPage = () => {
+  const [modalIsOpen, setModal] = React.useState(false);
+  console.log('MOdalopen ', modalIsOpen);
+  const [tileKey, setTileKey] = React.useState(null);
+
   return (
     <Page>
       <Banner>
         <BannerOverlay>
           <BannerContent>
             <PageTitle>Projects</PageTitle>
-            On this page you will find some projects that I have
-            worked on. Some of which are personal projects and some group
-            projects. Feel free to visit the github repositories where you can
-            see both the code base and live versions.
+            On this page you will find some projects that I have worked on. Some
+            of which are personal projects and some group projects. Feel free to
+            visit the github repositories where you can see both the code base
+            and live versions.
           </BannerContent>
         </BannerOverlay>
       </Banner>
@@ -103,11 +108,16 @@ const ProjectsPage = () => {
                 projectImg={project.image_path}
                 projectUrl={project.repo_url}
                 key={id}
+                id={id}
+                modalIsOpen={modalIsOpen}
+                setModal={setModal}
+                setTileKey={setTileKey}
               />
             );
           }, 0)}
         </ProjectContainer>
       </Container>
+      {modalIsOpen ? <Modal tileKey={tileKey} setModal={setModal} /> : null}
     </Page>
   );
 };

@@ -10,6 +10,7 @@ const AnchorContainer = styled.div`
   background-position: center;
   margin: 1em auto;
   border: solid 2px darkgrey;
+  cursor: pointer;
 `;
 
 const Anchor = styled.a`
@@ -29,17 +30,27 @@ const Anchor = styled.a`
   }
 `;
 
-const Tiles = ({ projectName, projectImg, projectUrl }) => (
-  <AnchorContainer projectImg={projectImg}>
-    <Anchor
-      href={projectUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      title={projectName}
-    >
-      {projectName}
-    </Anchor>
-  </AnchorContainer>
-);
+const Tiles = ({
+  projectName,
+  projectImg,
+  modalIsOpen,
+  setModal,
+  setTileKey,
+  id
+}) => {
+  const handleModal = () => {
+    setModal(true);
+    console.log('key', id);
+    setTileKey(id);
+  };
+
+  return (
+    <AnchorContainer projectImg={projectImg}>
+      <Anchor onClick={handleModal} title={projectName}>
+        {projectName}
+      </Anchor>
+    </AnchorContainer>
+  );
+};
 
 export default Tiles;
