@@ -11,16 +11,14 @@ import ProjectsPage from './components/pages/projects';
 import ContactPage from './components/pages/contact';
 import SuccessPage from './components/pages/contact/successful';
 
-const App = () => {
-  return (
-    <Router>
-      <Header />
-      <Route exact path="/" component={HomePage} />
-      <Route exact path="/projects" component={ProjectsPage} />
-      <Route exact path="/contact" component={ContactPage} />
-      <Route exact path="/contact/success" component={SuccessPage} />
-    </Router>
-  );
-};
+const App = () => (
+  <Router>
+    <Header />
+    <Route exact path="/" component={HomePage} />
+    <Route exact path="/projects" component={ProjectsPage} />
+    <Route exact path="/contact" component={ContactPage} />
+    <Route exact path="/contact/success" component={SuccessPage} />
+  </Router>
+);
 
 export default App;
