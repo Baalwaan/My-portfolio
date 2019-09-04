@@ -6,44 +6,29 @@ import AuthProjectImg from '../../../assets/projects/auth.png';
 import SmoothieImg from '../../../assets/projects/smoothie-bar.png';
 import FavWorkoutImg from '../../../assets/projects/fav-workout.png';
 
-// project urls
-
-const squareCircleUrl = 'https://github.com/FAC-Sixteen/square-circle';
-const githubCardsUrl = 'https://github.com/Baalwaan/Github-profile-cards';
-const StarGameUrl = 'https://github.com/Baalwaan/star-game';
-const remindlyUrl = 'https://github.com/Baalwaan/Remindly';
-const authUrl = 'https://github.com/Baalwaan/Authentication-By-Me';
-const smootieUrl = 'https://github.com/Baalwaan/Smoothie-bar';
-const favWorkoutUrl = 'https://github.com/Baalwaan/exp-hbs-project';
-
 //note to self when working on modal remember to add project summary!
 const projects = [
   {
     name: 'Square Circle',
-    image_path: SquareCircleImg,
-    repo_url: squareCircleUrl
+    image_path: SquareCircleImg
   },
   {
     name: 'Github Cards Profile',
-    image_path: GithubCardsImg,
-    repo_url: githubCardsUrl
+    image_path: GithubCardsImg
   },
   {
     name: 'React Star Game',
-    image_path: StarGameImg,
-    repo_url: StarGameUrl
+    image_path: StarGameImg
   },
-  { name: 'Remindly App', image_path: RemindlyImg, repo_url: remindlyUrl },
+  { name: 'Remindly App', image_path: RemindlyImg },
   {
     name: 'Authentication Project',
-    image_path: AuthProjectImg,
-    repo_url: authUrl
+    image_path: AuthProjectImg
   },
-  { name: 'Smoothie Bar App', image_path: SmoothieImg, repo_url: smootieUrl },
+  { name: 'Smoothie Bar App', image_path: SmoothieImg },
   {
     name: 'Post Ur Fav Workout',
-    image_path: FavWorkoutImg,
-    repo_url: favWorkoutUrl
+    image_path: FavWorkoutImg
   }
 ];
 
