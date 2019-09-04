@@ -30,7 +30,7 @@ const MobileHeader = () => {
   const handleBurgerState = () => {
     setBurgerActive('0%');
     setTimeout(() => {
-      setBckgrnd('rgb(105,105,105,0.6)');
+      setBckgrnd('rgb(192, 192, 192, 0.6)');
     }, 800);
   };
   return (
