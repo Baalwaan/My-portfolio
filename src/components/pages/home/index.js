@@ -4,6 +4,7 @@ import Particles from 'react-particles-js';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import AboutPage from '../about';
+import SocialMediaContainer from './SocialsContainer';
 
 //keyframes for type effect and background animations in animation folder
 import { typing, blink } from './animation/keyframes';
@@ -103,9 +104,10 @@ const HomePage = () => {
             Hi, I'm <Name>Burhan Baalwaan</Name>.{' '}
           </P1>
           <P2>I'm A Junior Fullstack Developer.</P2>
+          <SocialMediaContainer></SocialMediaContainer>
           <AnchorLink href="#about-me" style={{ textDecoration: 'none' }}>
             <Button>
-              View About me <Arrow>→</Arrow>
+              View About Me <Arrow>→</Arrow>
             </Button>
           </AnchorLink>
         </IntroTile>
