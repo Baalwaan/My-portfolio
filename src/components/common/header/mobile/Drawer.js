@@ -2,28 +2,36 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-import CloseButton from '../../../../assets/icons/close-button.png';
+import CloseButtonIcon from '../../../../assets/icons/close-button.png';
 
-const Container = styled.div`
+const DrawerContainer = styled.div`
+  background: ${props => props.bckgrnd};
   position: fixed;
   top: 0;
-  left: ${props => props.burgerActive};
+  right: ${props => props.burgerActive};
+  transition: all 1s ease;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+`;
+
+const Menu = styled.div`
+  position: absolute;
+  right: 0;
   display: flex
   flex-direction: column;
   justify-content: space-around;
-  width: 100vw;
-  height: 100vh;
-  // background-color: black;
+  width: 10em;
   background:rgb(39, 158, 137);
   color: white;
   font-size: 2em;
   font-weight: bold;
   transition: all 1s ease;
-  z-index:1;
+  
 `;
 
-const MenuContainer = styled.div`
-  margin: 0 1em;
+const CloseButton = styled.div`
+  margin: 1em 1em 0 0;
   display: flex;
   justify-content: flex-end;
 `;
@@ -37,29 +45,32 @@ const Link = styled(NavLink)`
   }
 `;
 
-const Drawer = ({ burgerActive, setBurgerActive }) => {
+const Drawer = ({ bckgrnd, setBckgrnd, burgerActive, setBurgerActive }) => {
   const updateBurgerState = () => {
-    setBurgerActive('100vw');
+    setBckgrnd('transparent');
+    setTimeout(() => {
+      setBurgerActive('-100vw');
+    }, 600);
   };
 
   return (
-    <>
-      <Container burgerActive={burgerActive}>
-        <MenuContainer>
+    <DrawerContainer
+      onClick={updateBurgerState}
+      bckgrnd={bckgrnd}
+      burgerActive={burgerActive}
+    >
+      <Menu>
+        <CloseButton>
           <img
-            src={CloseButton}
+            src={CloseButtonIcon}
             onClick={updateBurgerState}
             alt="Close Menu Button"
           />
-        </MenuContainer>
+        </CloseButton>
 
         <Link to="/" onClick={updateBurgerState}>
           Home
         </Link>
-
-        {/* <Link to="/#about-me" onClick={updateBurgerState}>
-          About Me
-        </Link> */}
 
         <Link to="/projects" onClick={updateBurgerState}>
           Projects
@@ -68,8 +79,8 @@ const Drawer = ({ burgerActive, setBurgerActive }) => {
         <Link to="/contact" onClick={updateBurgerState}>
           Contact
         </Link>
-      </Container>
-    </>
+      </Menu>
+    </DrawerContainer>
   );
 };
 
