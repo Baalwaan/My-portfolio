@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const AnchorContainer = styled.div`
+const Project = styled.div`
   width: 18em;
   height: 18em;
   background-image: url(${props => props.projectImg});
@@ -13,8 +13,9 @@ const AnchorContainer = styled.div`
   cursor: pointer;
 `;
 
-const Anchor = styled.a`
-  text-decoration: none;
+const Title = styled.p`
+  margin: 0;
+  padding: 0;
   color: white;
   font-size: 1.5em;
   width: 100%;
@@ -30,14 +31,7 @@ const Anchor = styled.a`
   }
 `;
 
-const Tiles = ({
-  projectName,
-  projectImg,
-  modalIsOpen,
-  setModal,
-  setTileKey,
-  id
-}) => {
+const Tiles = ({ projectName, projectImg, setModal, setTileKey, id }) => {
   const handleModal = () => {
     setModal(true);
     console.log('key', id);
@@ -45,11 +39,11 @@ const Tiles = ({
   };
 
   return (
-    <AnchorContainer projectImg={projectImg}>
-      <Anchor onClick={handleModal} title={projectName}>
+    <Project projectImg={projectImg}>
+      <Title onClick={handleModal} title={projectName}>
         {projectName}
-      </Anchor>
-    </AnchorContainer>
+      </Title>
+    </Project>
   );
 };
 
