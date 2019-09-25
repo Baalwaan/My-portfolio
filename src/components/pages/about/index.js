@@ -204,9 +204,8 @@ const AboutPage = () => (
       <P2>
         Nonetheless, I have a strong interest in React because of the way it
         makes managing things a lot easier with features like the virtual DOM,
-        handling data with states and its component based structure. I am also
-        currently taking an online course ‘Intro to Redux’ and would like to
-        work with React in a new role.
+        handling data with states and its component based structure. Therefore I would like to
+        work with React in my next role.
         <br />
         <br />
         <b>PS This is a React portfolio!</b>
