@@ -1,5 +1,12 @@
 const projects = [
   {
+    project_name: 'Memory-Box',
+    description:
+      'Think of Memory-Box as a diary letting you store your daily thoughts or challenges somewhere. Besides storing memories why not retrieve past memories you have stored to reflect on? It is more than just a diary, it is Memory-Box! Cool right?',
+    repo_link: 'https://github.com/Baalwaan/Client-Side-Memory-Box',
+    live_version: 'https://memory-box.netlify.com'
+  },
+  {
     project_name: 'Square Circle',
     description:
       'A platform helping to connect young people with unbiased employers.',
@@ -40,13 +47,6 @@ const projects = [
     description: 'A virtual smoothie bar! place your order at SmoothieBarr.',
     repo_link: 'https://github.com/Baalwaan/Smoothie-bar',
     live_version: 'https://smoothiebar.herokuapp.com/'
-  },
-  {
-    project_name: 'Workout-Of-The-Day',
-    description:
-      'An app that lets a user post a form to a PostgreSQL database about their favourite workout of the day.',
-    repo_link: 'https://github.com/Baalwaan/Authentication-By-Me',
-    live_version: 'https://express-handlebars-project.herokuapp.com/'
   }
 ];
 
